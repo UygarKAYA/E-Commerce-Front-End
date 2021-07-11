@@ -70,6 +70,66 @@
   text-decoration: none;
 }
 
+.sing-up {
+  /* background-image:url(../src/assets/images/hEX3bY8.jpg); */
+  background-color: #040404;
+  padding-top: 3px;
+  padding-bottom: 10px;
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.sign-up-h1 {
+  padding: 3px;
+  max-height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  color: #D18168;
+}
+
+.sign-up-button {
+  padding: 3px;
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+}
+
+.sing-in {
+  /* background-image:url(../src/assets/images/hEX3bY8.jpg); */
+  background-color: #040404;
+  padding-top: 26.5px;
+  padding-bottom: 26.5px;
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.sign-in-h1 {
+  padding: 3px;
+  max-height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  color: #D18168;
+}
+
+.sign-in-button {
+  padding: 3px;
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+}
+
 /* .footer-header:hover {
   border-bottom: 4px solid whitesmoke;
   text-decoration: none;
