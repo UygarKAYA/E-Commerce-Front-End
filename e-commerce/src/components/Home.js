@@ -7,6 +7,7 @@ function Home() {
         <div className="homeContainer">
             <video src={video} autoPlay loop muted />
             <h1><i>Discover The Products With Us</i></h1>
+            <p><i>Take Action Now !</i></p>
         </div>
     )
 }

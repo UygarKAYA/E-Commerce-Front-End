@@ -24,6 +24,14 @@ video {
     text-align: center;
 }
 
+.homeContainer > p {
+  color: #000;
+  font-size: 40px;
+  margin-top: -10px;
+  text-align: center;
+}
+
+
 @media only screen and (max-width: 960px) {
     .homeContainer > h1 {
       font-size: 70px;

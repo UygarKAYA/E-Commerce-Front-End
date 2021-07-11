@@ -1,14 +1,13 @@
-// import NavDropdown from 'react-bootstrap/NavDropdown';
 import Logo from '../../src/assets/images/Logo.png'
 import React, {useState, useEffect} from 'react'
 import {NavLink} from 'react-router-dom'
-import {Button} from './Button';
+// import {Button} from './Button';
 import './Header.css'
 
 function Header() {
 
     const [click, setClick] = useState(false);
-    const [button_, setButton] = useState(true);
+    const [, setButton] = useState(true);
 
     const reverseClick = () => setClick(!click);
     const closeMenu = () => setClick(false);
@@ -39,22 +38,22 @@ function Header() {
 
                 <ul className={click ? 'HeaderNavActive' : 'HeaderNav'}>
                     <li className="HeaderItem">
-                        <NavLink to="/products" className="HeaderLinks" onClick={closeMenu}>
-                            <i>Products</i>
+                        <NavLink to="/Products" className="HeaderLinks" onClick={closeMenu}>
+                            <i>Products</i> &nbsp; <i class="fas fa-tags"></i>
                         </NavLink>
                     </li>
                     <li className="HeaderItem">
-                        <NavLink to="/shopping-cart" className="HeaderLinks" onClick={closeMenu}>
+                        <NavLink to="/ShoppingCart" className="HeaderLinks" onClick={closeMenu}>
                             <i>Shopping Cart</i> &nbsp; <i class="fas fa-cart-arrow-down"></i>
                         </NavLink>
                     </li>
                     <li className="HeaderItem">
-                        <NavLink to="/sign-in" className="HeaderLinkss" onClick={closeMenu}>
+                        <NavLink to="/SignIn" className="HeaderLinkss" onClick={closeMenu}>
                             <i>Sing In</i>
                         </NavLink>
                     </li>
                     <li className="HeaderItem">
-                        <NavLink to="/sing-up" className="HeaderLinkss" onClick={closeMenu}>
+                        <NavLink to="/SingUp" className="HeaderLinkss" onClick={closeMenu}>
                             <i>Sign Up</i>
                         </NavLink>
                     </li>
