@@ -1,12 +1,13 @@
-import {Link} from 'react-router-dom'
 import React from 'react'
-import '../../src/App.css'
+import {Link} from 'react-router-dom'
 
-import ComputersElectronics from '../assets/images/computer.png'
-import BooksMovies from '../assets/images/book&movies.png'
-import CosmeticsPersonalCare from '../assets/images/cosmetics.png'
-import SmartHome from '../assets/images/smart-home.png'
-import Fashion from '../assets/images/fashion.jpg'
+import ComputersElectronics from '../../assets/images/computer&Electronics.png'
+import SmartHome from '../../assets/images/smartHome.png'
+import Fashion from '../../assets/images/fashion.jpg'
+import BooksMovies from '../../assets/images/book&movies.png'
+import CosmeticsPersonalCare from '../../assets/images/cosmetics&PersonalCare.png'
+
+import '../../App.css'
 
 function Products() {
     return (

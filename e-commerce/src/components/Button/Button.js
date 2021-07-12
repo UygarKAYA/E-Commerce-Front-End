@@ -1,9 +1,10 @@
-// import {NavLink} from 'react-router-dom';
 // import React from 'react';
+// import {NavLink} from 'react-router-dom';
+
 // import './Button.css';
 
 // const style = ['primaryButton', 'secondryButton'];
-// const size = ['mediumButton', 'largeButton'];
+// const size  = ['mediumButton', 'largeButton'];
 
 // export const Button = ({
 //     buttonSytle, 

@@ -1,43 +1,5 @@
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
-.footer{
+/* For Footer */
+.footer {
   color: white;
   background-color: #000;
   padding-top: 0.5em;
@@ -61,17 +23,18 @@
   text-decoration: none;
 }
 
-.footer-div-hr {
-  border-bottom: 2px solid #F0B386;
-}
-
 .footer-container:hover {
   color: #F034B4;
   text-decoration: none;
 }
 
+.footer-div-hr {
+  border-bottom: 2px solid #F0B386;
+}
+
+
+/* For Sing In */
 .sing-up {
-  /* background-image:url(../src/assets/images/hEX3bY8.jpg); */
   background-color: #040404;
   padding-top: 3px;
   padding-bottom: 10px;
@@ -101,7 +64,6 @@
 }
 
 .sing-in {
-  /* background-image:url(../src/assets/images/hEX3bY8.jpg); */
   background-color: #040404;
   padding-top: 26.5px;
   padding-bottom: 26.5px;
@@ -129,6 +91,9 @@
   justify-content: center;
   font-size: 25px;
 }
+
+
+/* For Products */
 .products {
   background-color: #040404;
   padding-top: 26.5px;
@@ -143,10 +108,4 @@
   border-bottom: 4px solid whitesmoke;
   text-decoration: none;
   color: #219C93;
-} */
-
-/* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 } */

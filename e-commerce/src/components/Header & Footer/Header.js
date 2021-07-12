@@ -1,7 +1,9 @@
-import Logo from '../../src/assets/images/Logo.png'
 import React, {useState, useEffect} from 'react'
 import {NavLink} from 'react-router-dom'
-// import {Button} from './Button';
+
+import Logo from '../../assets/images/logo.png'
+// import {Button} from './Button/Button';
+
 import './Header.css'
 
 function Header() {

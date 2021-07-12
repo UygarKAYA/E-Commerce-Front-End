@@ -1,12 +1,13 @@
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Products from './components/Products';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import SingUp from './components/SingUp';
-import SingIn from './components/SingIn';
-import Home from './components/Home';
-
 import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
+import Products from './components/Products & Shopping Cart/Products';
+import Header from './components/Header & Footer/Header';
+import Footer from './components/Header & Footer/Footer';
+import Home from './components/Home/Home';
+import SingUp from './components/Sing Up & Sing In/SingUp';
+import SingIn from './components/Sing Up & Sing In/SingIn';
+
 import './App.css';
 
 function App() {

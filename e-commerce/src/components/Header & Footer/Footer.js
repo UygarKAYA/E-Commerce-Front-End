@@ -1,6 +1,7 @@
-import {Link} from 'react-router-dom'
 import React from 'react'
-import '../../src/App.css'
+import {Link} from 'react-router-dom'
+
+import '../../App.css'
 
 function Footer() {
     return (

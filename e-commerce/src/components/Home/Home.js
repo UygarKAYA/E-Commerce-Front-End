@@ -1,6 +1,7 @@
-import video from '../assets/videos/video-for-quantum.mp4';
 import React from 'react';
 import './Home.css';
+
+import video from '../../assets/videos/video-1.mp4';
 
 function Home() {
     return (
