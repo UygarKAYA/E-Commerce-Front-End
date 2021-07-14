@@ -4,7 +4,7 @@ import {NavLink} from 'react-router-dom'
 import Logo from '../../assets/images/logo.png'
 // import {Button} from './Button/Button';
 
-import './Header.css'
+import '../../App.css'
 
 function Header() {
 

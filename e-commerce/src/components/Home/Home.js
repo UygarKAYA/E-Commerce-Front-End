@@ -1,5 +1,5 @@
 import React from 'react';
-import './Home.css';
+import '../../App.css';
 
 import video from '../../assets/videos/video-1.mp4';
 
