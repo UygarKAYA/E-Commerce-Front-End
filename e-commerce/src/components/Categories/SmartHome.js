@@ -7,12 +7,12 @@ import CardContent from '@material-ui/core/CardContent';
 import IconButton from '@material-ui/core/IconButton'
 import { AddShoppingCart } from '@material-ui/icons';
 
-import airpods from '../../assets/images/Categories/Computers_Electronics/airpods.png'
-import canon from '../../assets/images/Categories/Computers_Electronics/canon.png'
-import iphone from '../../assets/images/Categories/Computers_Electronics/iphone.png'
-import macbook from '../../assets/images/Categories/Computers_Electronics/macbook.png'
-import playstation from '../../assets/images/Categories/Computers_Electronics/playstation.png'
-import vestel from '../../assets/images/Categories/Computers_Electronics/vestel.png'
+import dyson from '../../assets/images/Categories/SmartHome/dyson.png'
+import light from '../../assets/images/Categories/SmartHome/light.png'
+import nespresso from '../../assets/images/Categories/SmartHome/nespresso.png'
+import sharp from '../../assets/images/Categories/SmartHome/sharp.png'
+import xenon from '../../assets/images/Categories/SmartHome/xenon-smart.jpg'
+import xiaomi from '../../assets/images/Categories/SmartHome/xiaomi-robot-vacuum.png'
 
 const useStyles = makeStyles({
     root: {
@@ -20,7 +20,7 @@ const useStyles = makeStyles({
     }
 });
 
-function Computers_Electronics({ product, onAddToCart }) {
+function SmartHome() {
 
     const classes = useStyles();
     // const handleAddToCart = () => onAddToCart(product.id, 1);
@@ -30,20 +30,46 @@ function Computers_Electronics({ product, onAddToCart }) {
             <div className="container">
                 <div className="row">
                     <div className="col-sm-4">
+                        <Card className={classes.root}>
+                            <div style={{height: "485px"}}>
+                                <div className="card text-white bg-dark mb-3 card text-center" style={{height: "500px"}}>
+                                    <img className="card-img-top" src={xiaomi} alt="xiaomi-robot-vacuum" style={{height: "250px"}} />
+                                    <CardContent style={{background: "#343a40", color: "white"}}>
+                                        <h3><i>Mi Robot Vacuum-Mop</i></h3>
+                                        <div className="container"> <div className="container-div-hr"></div></div>
+                                        <br/>
+                                        <h6><i>Battery Capacity: 3200mAh</i></h6>
+                                        <h6><i>Wi-Fi: 2.4GHz 802.11 b/g/n</i></h6>
+                                        <h6><i>Running Time: 60-130 minutes</i></h6>
+                                    </CardContent>
+                                    <CardActions disableSpacing className={classes.cardActions}>
+                                        <h4><i>$690.00</i></h4>
+                                        <IconButton aria-label="Add to Cart" 
+                                                    // onClick={handleAddToCart} 
+                                                        style={{position: "absolute", right: "0", color:"black"}}>
+                                            <AddShoppingCart />
+                                        </IconButton>
+                                    </CardActions>
+                                </div>
+                            </div>    
+                        </Card>
+                    </div>
+
+                    <div className="col-sm-4">
                         <Card className={classes.root} style={{marginBottom: '15px'}}>
                             <div style={{height: "485px"}}>
                                 <div className="card text-white bg-dark mb-3 card text-center" style={{height: "500px"}}>
-                                    <img className="card-img-top" src={airpods} alt="airpods" style={{height: "250px"}} />
+                                    <img className="card-img-top" src={dyson} alt="dyson-air-purifier" style={{height: "250px"}} />
                                     <CardContent style={{background: "#343a40", color: "white"}}>
-                                        <h3><i>AirPods</i></h3>
+                                        <h3><i>Pure Cool Air Purifier</i></h3>
                                         <div className="container"> <div className="container-div-hr"></div></div>
                                         <br/>
-                                        <h6><i>Chip: H1 headphone chip</i></h6>
-                                        <h6><i>Connectivity: Bluetooth 5.0</i></h6>
-                                        <h6><i>Sensors: Dual beamforming microphones</i></h6>
+                                        <h6><i>Filter: 360 degrees Glass HEPA Filter</i></h6>
+                                        <h6><i>Technology: Air MultiplierTM</i></h6>
+                                        <h6><i>Certified: Asthma Friendly by AAFA</i></h6>
                                     </CardContent>
                                     <CardActions disableSpacing className={classes.cardActions}>
-                                        <h4><i>$199.00</i></h4>
+                                        <h4><i>$549.99</i></h4>
                                         <IconButton aria-label="Add to Cart" 
                                                     // onClick={handleAddToCart} 
                                                         style={{position: "absolute", right: "0", color:"black"}}>
@@ -59,17 +85,17 @@ function Computers_Electronics({ product, onAddToCart }) {
                         <Card className={classes.root}>
                             <div style={{height: "485px"}}>
                                 <div className="card text-white bg-dark mb-3 card text-center" style={{height: "500px"}}>
-                                    <img className="card-img-top" src={canon} alt="canon-camera" style={{height: "250px"}} />
+                                    <img className="card-img-top" src={nespresso} alt="nespresso-smart-coffe-machine" style={{height: "250px"}} />
                                     <CardContent style={{background: "#343a40", color: "white"}}>
-                                        <h3><i>Canon EOS R5</i></h3>
+                                        <h3><i>Gina Coffee Machine</i></h3>
                                         <div className="container"> <div className="container-div-hr"></div></div>
                                         <br/>
-                                        <h6><i>Focusing: Dual Pixel CMOS AF</i></h6>
-                                        <h6><i>Viewfinder: 0.5 inch OLED color EVF</i></h6>
-                                        <h6><i>Flash: E-TTL II Auto Flash</i></h6>
+                                        <h6><i>Raw Materials: Glass</i></h6>
+                                        <h6><i>Module: Cold Drip</i></h6>
+                                        <h6><i>Valve: Stainless Steel</i></h6>
                                     </CardContent>
                                     <CardActions disableSpacing className={classes.cardActions}>
-                                        <h4><i>$3899.00</i></h4>
+                                        <h4><i>$260.00</i></h4>
                                         <IconButton aria-label="Add to Cart" 
                                                     // onClick={handleAddToCart} 
                                                         style={{position: "absolute", right: "0", color:"black"}}>
@@ -85,17 +111,17 @@ function Computers_Electronics({ product, onAddToCart }) {
                         <Card className={classes.root}>
                             <div style={{height: "485px"}}>
                                 <div className="card text-white bg-dark mb-3 card text-center" style={{height: "500px"}}>
-                                    <img className="card-img-top" src={iphone} alt="iphone" style={{height: "250px"}} />
+                                    <img className="card-img-top" src={xenon} alt="xenon-smart-controller" style={{height: "250px"}} />
                                     <CardContent style={{background: "#343a40", color: "white"}}>
-                                        <h3><i>Iphone 12 Pro Max</i></h3>
+                                        <h3><i>Wi-Fi Smart Switch</i></h3>
                                         <div className="container"> <div className="container-div-hr"></div></div>
                                         <br/>
-                                        <h6><i>Chip: A14 Bionic chip</i></h6>
-                                        <h6><i>Operating System: iOS 14</i></h6>
-                                        <h6><i>Sensors: LiDAR Scanner, Three‑axis gyro</i></h6>
+                                        <h6><i>Wi-Fi Security Mode: WEP.WPA/WPA2</i></h6>
+                                        <h6><i>Remote Control: Android / IOSCE, RoHS</i></h6>
+                                        <h6><i>Power Supply: AC 100-250V 50/60Hz</i></h6>
                                     </CardContent>
                                     <CardActions disableSpacing className={classes.cardActions}>
-                                        <h4><i>$1099.00</i></h4>
+                                        <h4><i>$550.00</i></h4>
                                         <IconButton aria-label="Add to Cart" 
                                                     // onClick={handleAddToCart} 
                                                         style={{position: "absolute", right: "0", color:"black"}}>
@@ -111,17 +137,17 @@ function Computers_Electronics({ product, onAddToCart }) {
                         <Card className={classes.root}>
                             <div style={{height: "485px"}}>
                                 <div className="card text-white bg-dark mb-3 card text-center" style={{height: "500px"}}>
-                                    <img className="card-img-top" src={playstation} alt="playstation" style={{height: "250px"}} />
+                                    <img className="card-img-top" src={sharp} alt="sharp-smart-oven" style={{height: "250px"}} />
                                     <CardContent style={{background: "#343a40", color: "white"}}>
-                                        <h3><i>PlayStation 5</i></h3>
+                                        <h3><i>Sharp Smart Oven</i></h3>
                                         <div className="container"> <div className="container-div-hr"></div></div>
                                         <br/>
-                                        <h6><i>CPU: 8x Zen 2 Cores at 3.5GHz with SMT</i></h6>
-                                        <h6><i>RAM: 16 GB GDDR6/256-bit RAM</i></h6>
-                                        <h6><i>GPU: 10.28 TFLOPS, 36 CUs at 2.23GHz</i></h6>
+                                        <h6><i>Edge Performance: 8 Pass Upper-Element</i></h6>
+                                        <h6><i>Voltage Height: 240V</i></h6>
+                                        <h6><i>Control Panel: LCD Display</i></h6>
                                     </CardContent>
                                     <CardActions disableSpacing className={classes.cardActions}>
-                                        <h4><i>$499.99</i></h4>
+                                        <h4><i>$2499.99</i></h4>
                                         <IconButton aria-label="Add to Cart" 
                                                     // onClick={handleAddToCart} 
                                                         style={{position: "absolute", right: "0", color:"black"}}>
@@ -137,43 +163,17 @@ function Computers_Electronics({ product, onAddToCart }) {
                         <Card className={classes.root}>
                             <div style={{height: "485px"}}>
                                 <div className="card text-white bg-dark mb-3 card text-center" style={{height: "500px"}}>
-                                    <img className="card-img-top" src={macbook} alt="macbook" style={{height: "250px"}} />
+                                    <img className="card-img-top" src={light} alt="smart-light-bulb" style={{height: "250px"}} />
                                     <CardContent style={{background: "#343a40", color: "white"}}>
-                                        <h3><i>MacBook Pro</i></h3> 
+                                        <h3><i>Led Smart Light Bulbs</i></h3> 
                                         <div className="container"> <div className="container-div-hr"></div></div>
                                         <br/>
-                                        <h6><i>Chip: M1 Chip with 8-Core</i></h6>
-                                        <h6><i>Storage: 512GB SSD storage</i></h6>
-                                        <h6><i>RAM: 8GB Accsess Memory</i></h6>
+                                        <h6><i>Maximum Compatible Wattage: ‎85 Watts</i></h6>
+                                        <h6><i>Average Life: 20000 Hours</i></h6>
+                                        <h6><i>Type of Bulb: LED</i></h6>
                                     </CardContent>
                                     <CardActions disableSpacing className={classes.cardActions}>
-                                        <h4><i>$1499.00</i></h4>
-                                        <IconButton aria-label="Add to Cart" 
-                                                    // onClick={handleAddToCart} 
-                                                        style={{position: "absolute", right: "0", color:"black"}}>
-                                            <AddShoppingCart />
-                                        </IconButton>
-                                    </CardActions>
-                                </div>
-                            </div>    
-                        </Card>
-                    </div>
-
-                    <div className="col-sm-4">
-                        <Card className={classes.root}>
-                            <div style={{height: "485px"}}>
-                                <div className="card text-white bg-dark mb-3 card text-center" style={{height: "500px"}}>
-                                    <img className="card-img-top" src={vestel} alt="vestel-television" style={{height: "250px"}} />
-                                    <CardContent style={{background: "#343a40", color: "white"}}>
-                                        <h3><i>Vestel 50U9510 TV</i></h3>
-                                        <div className="container"> <div className="container-div-hr"></div></div>
-                                        <br/>
-                                        <h6><i>Resolution: 4K Ultra HD (3840 x 2160)</i></h6>
-                                        <h6><i>Operating System: QUI</i></h6>
-                                        <h6><i>Number of Cores: 4 Cores</i></h6>
-                                    </CardContent>
-                                    <CardActions disableSpacing className={classes.cardActions}>
-                                        <h4><i>$599.00</i></h4>
+                                        <h4><i>$119.99</i></h4>
                                         <IconButton aria-label="Add to Cart" 
                                                     // onClick={handleAddToCart} 
                                                         style={{position: "absolute", right: "0", color:"black"}}>
@@ -190,4 +190,4 @@ function Computers_Electronics({ product, onAddToCart }) {
     )
 }
 
-export default Computers_Electronics
+export default SmartHome

@@ -7,12 +7,12 @@ import CardContent from '@material-ui/core/CardContent';
 import IconButton from '@material-ui/core/IconButton'
 import { AddShoppingCart } from '@material-ui/icons';
 
-import airpods from '../../assets/images/Categories/Computers_Electronics/airpods.png'
-import canon from '../../assets/images/Categories/Computers_Electronics/canon.png'
-import iphone from '../../assets/images/Categories/Computers_Electronics/iphone.png'
-import macbook from '../../assets/images/Categories/Computers_Electronics/macbook.png'
-import playstation from '../../assets/images/Categories/Computers_Electronics/playstation.png'
-import vestel from '../../assets/images/Categories/Computers_Electronics/vestel.png'
+import crime_and_punishment from '../../assets/images/Categories/Books_Movies/crime-and-punishment.png'
+import gramophone from '../../assets/images/Categories/Books_Movies/gramophone.png'
+import kafa from '../../assets/images/Categories/Books_Movies/kafa.png'
+import kapalı_gözler from '../../assets/images/Categories/Books_Movies/kapalı-gözler.png'
+import Kindle from '../../assets/images/Categories/Books_Movies/Kindle.png'
+import the_social_network from '../../assets/images/Categories/Books_Movies/the-social-network.png'
 
 const useStyles = makeStyles({
     root: {
@@ -20,7 +20,7 @@ const useStyles = makeStyles({
     }
 });
 
-function Computers_Electronics({ product, onAddToCart }) {
+function Books_Movies() {
 
     const classes = useStyles();
     // const handleAddToCart = () => onAddToCart(product.id, 1);
@@ -33,17 +33,17 @@ function Computers_Electronics({ product, onAddToCart }) {
                         <Card className={classes.root} style={{marginBottom: '15px'}}>
                             <div style={{height: "485px"}}>
                                 <div className="card text-white bg-dark mb-3 card text-center" style={{height: "500px"}}>
-                                    <img className="card-img-top" src={airpods} alt="airpods" style={{height: "250px"}} />
+                                    <img className="card-img-top" src={crime_and_punishment} alt="crime_and_punishment" style={{height: "250px"}} />
                                     <CardContent style={{background: "#343a40", color: "white"}}>
-                                        <h3><i>AirPods</i></h3>
+                                        <h3><i>Crime & Punishment</i></h3>
                                         <div className="container"> <div className="container-div-hr"></div></div>
                                         <br/>
-                                        <h6><i>Chip: H1 headphone chip</i></h6>
-                                        <h6><i>Connectivity: Bluetooth 5.0</i></h6>
-                                        <h6><i>Sensors: Dual beamforming microphones</i></h6>
+                                        <h6><i>Print Length: 430 pages</i></h6>
+                                        <h6><i>Publisher: Dover Publications</i></h6>
+                                        <h6><i>Language: English</i></h6>
                                     </CardContent>
                                     <CardActions disableSpacing className={classes.cardActions}>
-                                        <h4><i>$199.00</i></h4>
+                                        <h4><i>$10.49</i></h4>
                                         <IconButton aria-label="Add to Cart" 
                                                     // onClick={handleAddToCart} 
                                                         style={{position: "absolute", right: "0", color:"black"}}>
@@ -59,17 +59,17 @@ function Computers_Electronics({ product, onAddToCart }) {
                         <Card className={classes.root}>
                             <div style={{height: "485px"}}>
                                 <div className="card text-white bg-dark mb-3 card text-center" style={{height: "500px"}}>
-                                    <img className="card-img-top" src={canon} alt="canon-camera" style={{height: "250px"}} />
+                                    <img className="card-img-top" src={gramophone} alt="gramophone" style={{height: "250px"}} />
                                     <CardContent style={{background: "#343a40", color: "white"}}>
-                                        <h3><i>Canon EOS R5</i></h3>
+                                        <h3><i>Crosley CR6016A-RE</i></h3>
                                         <div className="container"> <div className="container-div-hr"></div></div>
                                         <br/>
-                                        <h6><i>Focusing: Dual Pixel CMOS AF</i></h6>
-                                        <h6><i>Viewfinder: 0.5 inch OLED color EVF</i></h6>
-                                        <h6><i>Flash: E-TTL II Auto Flash</i></h6>
+                                        <h6><i>Connectivity Technology:	Wired</i></h6>
+                                        <h6><i>Material: Wood, Plastic and Metal</i></h6>
+                                        <h6><i>Item Weight: 6 Pounds</i></h6>
                                     </CardContent>
                                     <CardActions disableSpacing className={classes.cardActions}>
-                                        <h4><i>$3899.00</i></h4>
+                                        <h4><i>$175.90</i></h4>
                                         <IconButton aria-label="Add to Cart" 
                                                     // onClick={handleAddToCart} 
                                                         style={{position: "absolute", right: "0", color:"black"}}>
@@ -85,17 +85,17 @@ function Computers_Electronics({ product, onAddToCart }) {
                         <Card className={classes.root}>
                             <div style={{height: "485px"}}>
                                 <div className="card text-white bg-dark mb-3 card text-center" style={{height: "500px"}}>
-                                    <img className="card-img-top" src={iphone} alt="iphone" style={{height: "250px"}} />
+                                    <img className="card-img-top" src={the_social_network} alt="the_social_network" style={{height: "250px"}} />
                                     <CardContent style={{background: "#343a40", color: "white"}}>
-                                        <h3><i>Iphone 12 Pro Max</i></h3>
+                                        <h3><i>The Social Network</i></h3>
                                         <div className="container"> <div className="container-div-hr"></div></div>
                                         <br/>
-                                        <h6><i>Chip: A14 Bionic chip</i></h6>
-                                        <h6><i>Operating System: iOS 14</i></h6>
-                                        <h6><i>Sensors: LiDAR Scanner, Three‑axis gyro</i></h6>
+                                        <h6><i>Director:‎ David Fincher</i></h6>
+                                        <h6><i>Release date: ‎January 11, 2011</i></h6>
+                                        <h6><i>Type: Drama/History</i></h6>
                                     </CardContent>
                                     <CardActions disableSpacing className={classes.cardActions}>
-                                        <h4><i>$1099.00</i></h4>
+                                        <h4><i>$5.50</i></h4>
                                         <IconButton aria-label="Add to Cart" 
                                                     // onClick={handleAddToCart} 
                                                         style={{position: "absolute", right: "0", color:"black"}}>
@@ -111,17 +111,17 @@ function Computers_Electronics({ product, onAddToCart }) {
                         <Card className={classes.root}>
                             <div style={{height: "485px"}}>
                                 <div className="card text-white bg-dark mb-3 card text-center" style={{height: "500px"}}>
-                                    <img className="card-img-top" src={playstation} alt="playstation" style={{height: "250px"}} />
+                                    <img className="card-img-top" src={kafa} alt="kafa" style={{height: "250px"}} />
                                     <CardContent style={{background: "#343a40", color: "white"}}>
-                                        <h3><i>PlayStation 5</i></h3>
+                                        <h3><i>Magazine</i></h3>
                                         <div className="container"> <div className="container-div-hr"></div></div>
                                         <br/>
-                                        <h6><i>CPU: 8x Zen 2 Cores at 3.5GHz with SMT</i></h6>
-                                        <h6><i>RAM: 16 GB GDDR6/256-bit RAM</i></h6>
-                                        <h6><i>GPU: 10.28 TFLOPS, 36 CUs at 2.23GHz</i></h6>
+                                        <h6><i>Stock Code: KAFA.2107.S082</i></h6>
+                                        <h6><i>Realesed Month: July</i></h6>
+                                        <h6><i>Volume Number: 82</i></h6>
                                     </CardContent>
                                     <CardActions disableSpacing className={classes.cardActions}>
-                                        <h4><i>$499.99</i></h4>
+                                        <h4><i>$1.75</i></h4>
                                         <IconButton aria-label="Add to Cart" 
                                                     // onClick={handleAddToCart} 
                                                         style={{position: "absolute", right: "0", color:"black"}}>
@@ -137,17 +137,17 @@ function Computers_Electronics({ product, onAddToCart }) {
                         <Card className={classes.root}>
                             <div style={{height: "485px"}}>
                                 <div className="card text-white bg-dark mb-3 card text-center" style={{height: "500px"}}>
-                                    <img className="card-img-top" src={macbook} alt="macbook" style={{height: "250px"}} />
+                                    <img className="card-img-top" src={Kindle} alt="Kindle" style={{height: "250px"}} />
                                     <CardContent style={{background: "#343a40", color: "white"}}>
-                                        <h3><i>MacBook Pro</i></h3> 
+                                        <h3><i>Kindle Oasis</i></h3> 
                                         <div className="container"> <div className="container-div-hr"></div></div>
                                         <br/>
-                                        <h6><i>Chip: M1 Chip with 8-Core</i></h6>
-                                        <h6><i>Storage: 512GB SSD storage</i></h6>
-                                        <h6><i>RAM: 8GB Accsess Memory</i></h6>
+                                        <h6><i>Connectivity: 4GB LTE</i></h6>
+                                        <h6><i>Storage: 32GB storage</i></h6>
+                                        <h6><i>Number of Contents: 150</i></h6>
                                     </CardContent>
                                     <CardActions disableSpacing className={classes.cardActions}>
-                                        <h4><i>$1499.00</i></h4>
+                                        <h4><i>$269.99</i></h4>
                                         <IconButton aria-label="Add to Cart" 
                                                     // onClick={handleAddToCart} 
                                                         style={{position: "absolute", right: "0", color:"black"}}>
@@ -163,17 +163,17 @@ function Computers_Electronics({ product, onAddToCart }) {
                         <Card className={classes.root}>
                             <div style={{height: "485px"}}>
                                 <div className="card text-white bg-dark mb-3 card text-center" style={{height: "500px"}}>
-                                    <img className="card-img-top" src={vestel} alt="vestel-television" style={{height: "250px"}} />
+                                    <img className="card-img-top" src={kapalı_gözler} alt="kapalı_gözler" style={{height: "250px"}} />
                                     <CardContent style={{background: "#343a40", color: "white"}}>
-                                        <h3><i>Vestel 50U9510 TV</i></h3>
+                                        <h3><i>Close Eyes</i></h3>
                                         <div className="container"> <div className="container-div-hr"></div></div>
                                         <br/>
-                                        <h6><i>Resolution: 4K Ultra HD (3840 x 2160)</i></h6>
-                                        <h6><i>Operating System: QUI</i></h6>
-                                        <h6><i>Number of Cores: 4 Cores</i></h6>
+                                        <h6><i>Record Type: 12" (inch)</i></h6>
+                                        <h6><i>Music Genre: Classical</i></h6>
+                                        <h6><i>Number of Pieces: 16</i></h6>
                                     </CardContent>
                                     <CardActions disableSpacing className={classes.cardActions}>
-                                        <h4><i>$599.00</i></h4>
+                                        <h4><i>$40.90</i></h4>
                                         <IconButton aria-label="Add to Cart" 
                                                     // onClick={handleAddToCart} 
                                                         style={{position: "absolute", right: "0", color:"black"}}>
@@ -190,4 +190,4 @@ function Computers_Electronics({ product, onAddToCart }) {
     )
 }
 
-export default Computers_Electronics
+export default Books_Movies
