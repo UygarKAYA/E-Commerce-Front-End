@@ -1,17 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import Products from './components/Products & Shopping Cart/Products';
-import Header from './components/Header & Footer/Header';
-import Footer from './components/Header & Footer/Footer';
-import Home from './components/Home/Home';
-import SingUp from './components/Sing Up & Sing In/SingUp';
-import SingIn from './components/Sing Up & Sing In/SingIn';
-import Computers_Electronics from './components/Categories/Computers_Electronics';
-import SmartHome from './components/Categories/SmartHome';
-import Books_Movies from './components/Categories/Books_Movies';
-import Fashion from './components/Categories/Fashion';
-import Cosmetics_PersonalCare from './components/Categories/Cosmetics_PersonalCare';
+import {Header, Home, SingUp, SingIn, Footer} from './components';
+import {Products} from './components';
+import {Computers_Electronics, SmartHome, Books_Movies} from './components';
+import {Fashion, Cosmetics_PersonalCare} from './components';
 
 import './App.css';
 
