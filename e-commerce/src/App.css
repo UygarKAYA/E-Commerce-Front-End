@@ -95,6 +95,11 @@
   color: #fff;
 }
 
+.HeaderBadge {
+  margin-top: -33px;
+  margin-left: 2.5px;
+}
+
 @media screen and (max-width: 960px) {
   .HeaderItem {
     position: relative;

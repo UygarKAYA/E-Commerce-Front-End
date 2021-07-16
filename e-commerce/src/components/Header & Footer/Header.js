@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {NavLink} from 'react-router-dom'
+import {Badge} from '@material-ui/core'
 
 import Logo from '../../assets/images/logo.png'
 // import {Button} from './Button/Button';
@@ -47,6 +48,9 @@ function Header() {
                     <li className="HeaderItem">
                         <NavLink to="/ShoppingCart" className="HeaderLinks" onClick={closeMenu}>
                             <i>Shopping Cart</i> &nbsp; <i class="fas fa-cart-arrow-down"></i>
+                                <div className="HeaderBadge">
+                                    <Badge badgeContent={2}></Badge>
+                                </div>
                         </NavLink>
                     </li>
                     <li className="HeaderItem">
