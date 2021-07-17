@@ -8,11 +8,11 @@ import IconButton from '@material-ui/core/IconButton'
 import { AddShoppingCart } from '@material-ui/icons';
 
 import garnier_skincare from '../../assets/images/Categories/Cosmetics_Personal Care/garnier-skincare.png'
-import la_roche_posay from '../../assets/images/Categories/Cosmetics_Personal Care/la-roche-posay-sun-creame.png'
 import lacoste_red from '../../assets/images/Categories/Cosmetics_Personal Care/lacoste-red.png'
 import oralB from '../../assets/images/Categories/Cosmetics_Personal Care/oralB.png'
 import philips from '../../assets/images/Categories/Cosmetics_Personal Care/philips.png'
 import tresemme from '../../assets/images/Categories/Cosmetics_Personal Care/tresemme.png'
+import la_roche_posay from '../../assets/images/Categories/Cosmetics_Personal Care/la-roche-posay-sun-creame.png'
 
 const useStyles = makeStyles({
     root: {

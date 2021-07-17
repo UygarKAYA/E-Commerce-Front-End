@@ -173,7 +173,7 @@ function Fashion({ product, onAddToCart }) {
                                         <h6><i>Color: Navy Blue</i></h6>
                                     </CardContent>
                                     <CardActions disableSpacing className={classes.cardActions}>
-                                        <h4><i>$599.00</i></h4>
+                                        <h4><i>$30.00</i></h4>
                                         <IconButton aria-label="Add to Cart" 
                                                     // onClick={handleAddToCart} 
                                                         style={{position: "absolute", right: "0", color:"black"}}>
