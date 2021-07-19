@@ -7,10 +7,11 @@ import Logo from '../../assets/images/logo.png'
 
 import '../../App.css'
 
-function Header() {
+function Header(props) {
 
     const [click, setClick] = useState(false);
     const [, setButton] = useState(true);
+    const {countCartItems} = props;
 
     const reverseClick = () => setClick(!click);
     const closeMenu = () => setClick(false);
@@ -49,7 +50,7 @@ function Header() {
                         <NavLink to="/ShoppingCart" className="HeaderLinks" onClick={closeMenu}>
                             <i>Shopping Cart</i> &nbsp; <i class="fas fa-cart-arrow-down"></i>
                                 <div className="HeaderBadge">
-                                    <Badge badgeContent={2}></Badge>
+                                    {countCartItems ? (<Badge badgeContent={countCartItems}></Badge>) : ('')}
                                 </div>
                         </NavLink>
                     </li>

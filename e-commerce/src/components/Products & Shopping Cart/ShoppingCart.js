@@ -5,10 +5,10 @@ function ShoppingCart(props) {
     const {cartItems, addProduct, removeProduct} = props;    
     
     return (
-        <>
+        <div>
             <h2>Cart Items</h2>
             <div>{cartItems.length === 0 && <div>Cart is empty</div>}</div>
-            {/* {cartItems.map((items) => (
+            {cartItems.map((items) => (
                 <div className="row" key={items.id}>
                     <div className="col-2">{items.name}</div>
                     <div className="col-2">
@@ -19,8 +19,8 @@ function ShoppingCart(props) {
                         {items.qty} x ${items.price}
                     </div>
                 </div>
-            ))} */}
-        </>
+            ))}
+        </div>
     )
 }
 
