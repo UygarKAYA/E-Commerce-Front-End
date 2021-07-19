@@ -14,15 +14,16 @@ const useStyles = makeStyles({
     }
 });
 
-function Computers_Electronics() {
+function Cosmetics_PersonalCare(props) {
 
     const classes = useStyles();
+    const {addProduct} = props;
 
     return (
         <div className="categories">
             <div className="container">
                 <div className="row">
-                    {data.Computer_and_Electronics.map((product) => (
+                    {data.Cosmetics_and_PersonalCare.map((product) => (
                         <div className="col-sm-4" key={product.id}>
                             <Card className={classes.root} style={{marginBottom: '15px'}}>
                                 <div style={{height: "485px"}}>
@@ -39,7 +40,7 @@ function Computers_Electronics() {
                                         <CardActions disableSpacing className={classes.cardActions}>
                                             <h4><i>${product.price}</i></h4>
                                             <IconButton aria-label="Add to Cart" 
-                                                        // onClick={handleAddToCart} 
+                                                         onClick={addProduct} 
                                                             style={{position: "absolute", right: "0", color:"black"}}>
                                                 <AddShoppingCart />
                                             </IconButton>
@@ -55,4 +56,4 @@ function Computers_Electronics() {
     )
 }
 
-export default Computers_Electronics
+export default Cosmetics_PersonalCare

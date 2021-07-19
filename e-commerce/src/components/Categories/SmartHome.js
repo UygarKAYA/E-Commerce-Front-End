@@ -14,9 +14,10 @@ const useStyles = makeStyles({
     }
 });
 
-function SmartHome() {
+function SmartHome(props) {
 
     const classes = useStyles();
+    const {addProduct} = props
     
     return (
         <div className="categories">
@@ -39,7 +40,7 @@ function SmartHome() {
                                         <CardActions disableSpacing className={classes.cardActions}>
                                             <h4><i>${product.price}</i></h4>
                                             <IconButton aria-label="Add to Cart" 
-                                                        // onClick={handleAddToCart} 
+                                                         onClick={addProduct} 
                                                             style={{position: "absolute", right: "0", color:"black"}}>
                                                 <AddShoppingCart />
                                             </IconButton>

@@ -27,11 +27,11 @@ function Footer() {
                                 <h4><i>Categories</i></h4>
                             </div>
                             <ul className="list-unstyled">
-                                <li><i><Link to='/Computers_Electronics' className="footer-header-link">Computers & Electronics</Link></i></li>
-                                <li><i><Link to='/Books_Movies' className="footer-header-link">Books & Movies</Link></i></li>
+                                <li><i><Link to='/Computers&Electronics' className="footer-header-link">Computers & Electronics</Link></i></li>
+                                <li><i><Link to='/Books&Movies' className="footer-header-link">Books & Movies</Link></i></li>
                                 <li><i><Link to='/SmartHome' className="footer-header-link">Smart Home</Link></i></li>
                                 <li><i><Link to='/Fashion' className="footer-header-link">Fashion</Link></i></li>
-                                <li><i><Link to='Cosmetics_PersonalCare' className="footer-header-link">Cosmetics & Personal Care</Link></i></li>
+                                <li><i><Link to='Cosmetics&PersonalCare' className="footer-header-link">Cosmetics & Personal Care</Link></i></li>
                             </ul>
                         </div>    
                     </div>
