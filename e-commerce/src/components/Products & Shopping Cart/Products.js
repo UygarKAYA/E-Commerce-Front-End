@@ -20,7 +20,7 @@ function Products() {
                             <div className="card-body">
                                 <h5 className="card-title"><i>Computers & Electronics</i></h5>
                                 <p className="card-text"><i>You can find products related to Computer & Electronics appliances here</i></p>
-                                <Link to="/Computers&Electronics" target= "_blank" className="btn btn-outline-light"><i>Computers & Electronics</i></Link>
+                                <Link to="/Computers&Electronics" className="btn btn-outline-light"><i>Computers & Electronics</i></Link>
                             </div>
                         </div>
                     </div>
@@ -31,7 +31,7 @@ function Products() {
                             <div className="card-body">
                                 <h5 className="card-title"><i>Smart Home</i></h5>
                                 <p className="card-text"><i>You can find products related to smart home appliances here</i></p>
-                                <Link to="/SmartHome" target= "_blank" className="btn btn-outline-light"><i>Smart Home</i></Link>
+                                <Link to="/SmartHome" className="btn btn-outline-light"><i>Smart Home</i></Link>
                             </div>
                         </div>
                     </div>
@@ -42,7 +42,7 @@ function Products() {
                             <div className="card-body">
                                 <h5 className="card-title"><i>Books & Movies</i></h5>
                                 <p className="card-text"><i>You can find products related to Books & Movies appliances here</i></p>
-                                <Link to="/Books&Movies" target= "_blank" className="btn btn-outline-light"><i>Books & Movies</i></Link>
+                                <Link to="/Books&Movies" className="btn btn-outline-light"><i>Books & Movies</i></Link>
                             </div>
                         </div>
                     </div>
@@ -53,7 +53,7 @@ function Products() {
                             <div className="card-body">
                                 <h5 className="card-title"><i>Fashion</i></h5>
                                 <p className="card-text"><i>You can find products related to Fashion appliances here</i></p>
-                                <Link to="/Fashion" target= "_blank" className="btn btn-outline-dark"><i>Fashion</i></Link>
+                                <Link to="/Fashion" className="btn btn-outline-dark"><i>Fashion</i></Link>
                             </div>
                         </div>
                     </div>
@@ -64,7 +64,7 @@ function Products() {
                             <div className="card-body">
                                 <h5 className="card-title"><i>Cosmetics & Personal Care</i></h5>
                                 <p className="card-text"><i>You can find Cosmetics & Personal Care products here</i></p>
-                                <Link to="/Cosmetics&PersonalCare" target= "_blank" className="btn btn-outline-light"><i>Cosmetics & Personal Care</i></Link>
+                                <Link to="/Cosmetics&PersonalCare" className="btn btn-outline-light"><i>Cosmetics & Personal Care</i></Link>
                             </div>
                         </div>
                     </div>

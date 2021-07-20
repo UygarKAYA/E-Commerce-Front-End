@@ -12,6 +12,15 @@ function App() {
 
   const [cartItems, setCartItems] = useState([]);
 
+  const addProductToCart = (product) => {
+    const exist = cartItems.find(x => x.id === product.id);
+    if(exist) {
+      alert("The product has already been added to the Shopping Cart");
+    } else {
+      setCartItems([...cartItems, {...product, qty: 1}])
+    }
+  }
+
   const addProduct = (product) => {
     const exist = cartItems.find(x => x.id === product.id);
     if(exist) {
@@ -48,11 +57,11 @@ function App() {
           <Route path='/SignIn' exact component={SingIn}/>
           <Route path='/Products' exact component={Products}/>
           <Route path="/ShoppingCart" render = {props => (<ShoppingCart {...props} cartItems={cartItems} addProduct={addProduct} removeProduct={removeProduct}/>)} />
-          <Route path='/Computers&Electronics' render = {props => (<ComputersElectronics {...props} addProduct={addProduct}/>)} />
-          <Route path='/SmartHome' render = {props => (<SmartHome {...props} addProduct={addProduct}/>)} />
-          <Route path='/Books&Movies' render = {props => (<BooksMovies {...props} addProduct={addProduct}/>)} />
-          <Route path='/Fashion' render = {props => (<Fashion {...props} addProduct={addProduct}/>)} />
-          <Route path='/Cosmetics&PersonalCare' render = {props => (<CosmeticsPersonalCare {...props} addProduct={addProduct}/>)} />
+          <Route path='/Computers&Electronics' render = {props => (<ComputersElectronics {...props} addProductToCart={addProductToCart}/>)} />
+          <Route path='/SmartHome' render = {props => (<SmartHome {...props} addProductToCart={addProductToCart}/>)} />
+          <Route path='/Books&Movies' render = {props => (<BooksMovies {...props} addProductToCart={addProductToCart}/>)} />
+          <Route path='/Fashion' render = {props => (<Fashion {...props} addProductToCart={addProductToCart}/>)} />
+          <Route path='/Cosmetics&PersonalCare' render = {props => (<CosmeticsPersonalCare {...props} addProductToCart={addProductToCart}/>)} />
         </Switch>
         <Footer />
       </BrowserRouter> 

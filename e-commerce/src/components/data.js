@@ -105,7 +105,7 @@ const data = {
 
     Books_and_Movies: [
         {
-            id: 1,
+            id: 7,
             name: "Crime & Punishment",
             price: "10.49",
             categories: "Books_and_Movies",
@@ -116,7 +116,7 @@ const data = {
         }, 
         
         {
-            id: 2,
+            id: 8,
             name: "Crosley CR6016A-RE",
             price: "175.90",
             categories: "Books_and_Movies",
@@ -127,7 +127,7 @@ const data = {
         }, 
         
         {
-            id: 3,
+            id: 9,
             name: "The Social Network",
             price: "5.50",
             categories: "Books_and_Movies",
@@ -138,7 +138,7 @@ const data = {
         }, 
         
         {
-            id: 4,
+            id: 10,
             name: "Magazine",
             price: "1.75",
             categories: "Books_and_Movies",
@@ -149,7 +149,7 @@ const data = {
         }, 
         
         {
-            id: 5,
+            id: 11,
             name: "Kindle Oasis",
             price: "269.69",
             categories: "Books_and_Movies",
@@ -160,7 +160,7 @@ const data = {
         }, 
         
         {
-            id: 6,
+            id: 12,
             name: "Close Eyes",
             price: "40.90",
             categories: "Books_and_Movies",
@@ -173,7 +173,7 @@ const data = {
 
     SmartHome: [
         {
-            id: 1,
+            id: 13,
             name: "Mi Robot Vacuum-Mop",
             price: "690.00",
             categories: "SmartHome",
@@ -184,7 +184,7 @@ const data = {
         }, 
         
         {
-            id: 2,
+            id: 14,
             name: "Pure Cool Air Purifier",
             price: "549.99",
             categories: "SmartHome",
@@ -195,7 +195,7 @@ const data = {
         }, 
         
         {
-            id: 3,
+            id: 15,
             name: "Gina Coffee Machine",
             price: "260.00",
             categories: "SmartHome",
@@ -206,7 +206,7 @@ const data = {
         }, 
         
         {
-            id: 4,
+            id: 16,
             name: "Wi-Fi Smart Switch",
             price: "550.00",
             categories: "SmartHome",
@@ -217,7 +217,7 @@ const data = {
         }, 
         
         {
-            id: 5,
+            id: 17,
             name: "Sharp Smart Oven",
             price: "2499.99",
             categories: "SmartHome",
@@ -228,7 +228,7 @@ const data = {
         }, 
         
         {
-            id: 6,
+            id: 18,
             name: "Led Smart Light Bulbs",
             price: "119.99",
             categories: "SmartHome",
@@ -241,7 +241,7 @@ const data = {
 
     Fashion: [
         {
-            id: 1,
+            id: 19,
             name: "Shirt",
             price: "34.99",
             categories: "Fashion",
@@ -252,7 +252,7 @@ const data = {
         }, 
         
         {
-            id: 2,
+            id: 20,
             name: "v-necked T-Shirt",
             price: "35.00",
             categories: "Fashion",
@@ -263,7 +263,7 @@ const data = {
         }, 
         
         {
-            id: 3,
+            id: 21,
             name: "Casual Shoes",
             price: "95.50",
             categories: "Fashion",
@@ -274,7 +274,7 @@ const data = {
         }, 
         
         {
-            id: 4,
+            id: 22,
             name: "Bag",
             price: "69.99",
             categories: "Fashion",
@@ -285,7 +285,7 @@ const data = {
         }, 
         
         {
-            id: 5,
+            id: 23,
             name: "Dry Strke JSY",
             price: "10.50",
             categories: "Fashion",
@@ -296,7 +296,7 @@ const data = {
         }, 
         
         {
-            id: 6,
+            id: 24,
             name: "Hat",
             price: "30.00",
             categories: "Fashion",
@@ -309,7 +309,7 @@ const data = {
 
     Cosmetics_and_PersonalCare: [
         {
-            id: 1,
+            id: 25,
             name: "Expert Step-2",
             price: "25.00",
             categories: "Cosmetics_and_PersonalCare",
@@ -320,7 +320,7 @@ const data = {
         }, 
         
         {
-            id: 2,
+            id: 26,
             name: "Power White",
             price: "6.99",
             categories: "Cosmetics_and_PersonalCare",
@@ -331,7 +331,7 @@ const data = {
         }, 
         
         {
-            id: 3,
+            id: 27,
             name: "Shaver Hair Clipper",
             price: "235.00",
             categories: "Cosmetics_and_PersonalCare",
@@ -342,7 +342,7 @@ const data = {
         }, 
         
         {
-            id: 4,
+            id: 28,
             name: "Red Pour Homme Edt",
             price: "34.99",
             categories: "Cosmetics_and_PersonalCare",
@@ -353,7 +353,7 @@ const data = {
         }, 
         
         {
-            id: 5,
+            id: 29,
             name: "Anthelios Melt in Milk",
             price: "20.00",
             categories: "Cosmetics_and_PersonalCare",
@@ -364,7 +364,7 @@ const data = {
         }, 
         
         {
-            id: 6,
+            id: 30,
             name: "Vitality Cross Action",
             price: "17.50",
             categories: "Cosmetics_and_PersonalCare",

@@ -3,8 +3,6 @@ import {NavLink} from 'react-router-dom'
 import {Badge} from '@material-ui/core'
 
 import Logo from '../../assets/images/logo.png'
-// import {Button} from './Button/Button';
-
 import '../../App.css'
 
 function Header(props) {
