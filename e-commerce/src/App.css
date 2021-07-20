@@ -406,13 +406,12 @@ video {
 }
 
 .productTitle {
-  /* border: 0.141rem solid white; */
+  padding-top: 20px;
 }
 
 .itemsInfo .productTitle p {
   font-size: 17.5px;
-  align-items: center;
-  text-transform: capitalize;
+  
 }
 
 .plus-qty-minus {
@@ -463,6 +462,7 @@ video {
   display: flex;
   justify-content: flex-end;
   margin-right: 5rem;
+  padding-top: 35px;
 }
 
 .deleteProduct button {
