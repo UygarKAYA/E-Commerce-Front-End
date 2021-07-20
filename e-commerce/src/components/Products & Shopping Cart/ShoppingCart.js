@@ -31,10 +31,10 @@ function ShoppingCart(props) {
                                     <button onClick={()=>removeProduct(items)} className="removeProduct"><i class="far fa-minus minus"></i></button>
                                 </div>
                                 <div className="productPrice">
-                                    <h5><i>$ {items.price}</i></h5>
+                                    <h5>$ {items.price}</h5>
                                 </div>
                                 <div className="deleteProduct">
-                                    <button onClick={()=>deleteProduct(items)} className="addProduct"><i class="fas fa-trash-alt"></i></button>
+                                    <button onClick={()=>deleteProduct(items)}><i class="fas fa-trash-alt"></i></button>
                                 </div>
                             </div>
                         </div>

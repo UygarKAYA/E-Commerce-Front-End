@@ -374,33 +374,14 @@ video {
 .ShopingCartNoItems {
   background-color: #040404;
   padding-top: 26.5px;
-  padding-bottom: 264px;
+  padding-bottom: 297px;
   max-height: 100%;
   display: flex;
   justify-content: center;
-  font-size: 20px;
+  font-size: 25px;
   margin: auto;
   color: white;
 }
-
-/* .ShoppingCartWithItems {
-  background-color: #040404;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  font-size: 20px;
-  margin: auto;
-  color: white;
-}
-
-.tablecontent {
-  background-color: #040404;
-  max-height: 100%;
-  display: flex;
-  justify-content: center;
-  font-size: 20px;
-  margin: auto;
-  color: white;
-} */
 
 .itemsInfo {
   width: 100%;
@@ -411,7 +392,10 @@ video {
   justify-content: center;
   background-color: #040404;
   display:grid;
-  grid-template-columns: 4fr 4fr 4fr 2fr 2fr;
+  grid-template-columns: 2.5fr 5fr 3fr 2fr 2fr;
+  border: 0.141rem solid white;
+  border-radius: 1rem;
+  margin: 5px;
 }
 
 .itemsInfo .productImage img {
@@ -422,9 +406,7 @@ video {
 }
 
 .productTitle {
-  text-align: center;
-  justify-self: center;
-  vertical-align: middle;
+  /* border: 0.141rem solid white; */
 }
 
 .itemsInfo .productTitle p {
@@ -453,7 +435,7 @@ video {
 }
 
 .plus-qty-minus input {
-  width: 5rem;
+  width: 4rem;
   border: 0.141rem solid white;
   font-size: 1.6rem;
   text-align: center;
@@ -473,18 +455,13 @@ video {
   align-items: center;
 }
 
-.productPrice h3 {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 2rem;
-  text-transform: capitalize;
-  color: var(--main-color);
+.productPrice h5 {
+  font-size: 25px;
 }
 
 .deleteProduct {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
   margin-right: 5rem;
 }
 
@@ -492,9 +469,12 @@ video {
   border: none;
   background-color: transparent;
   color: white;
+  outline: none;
+  cursor: pointer;
+  border: 0.141rem solid white;
+  border-radius: 0.5rem;
+  width: 2.7rem;
+  height: 2.7rem;
+  justify-content: center;
+  align-items: center;
 }
-/* .footer-header:hover {
-  border-bottom: 4px solid whitesmoke;
-  text-decoration: none;
-  color: #219C93;
-} */
