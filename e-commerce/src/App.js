@@ -47,6 +47,19 @@ function App() {
     }
   };
 
+  const deleteProduct = (product) => {
+    const exist = cartItems.find((x) => x.id === product.id);
+    if (exist.qty === 1) {
+      setCartItems(cartItems.filter((x) => x.id !== product.id));
+    } else {
+      setCartItems(
+        cartItems.map((x) =>
+          x.id === product.id ? {...exist, qty: exist.qty - 1} : x
+        )
+      );
+    }
+  };
+
   return (
     <> 
       <BrowserRouter>
@@ -56,7 +69,7 @@ function App() {
           <Route path='/SingUp' exact component={SingUp}/>
           <Route path='/SignIn' exact component={SingIn}/>
           <Route path='/Products' exact component={Products}/>
-          <Route path="/ShoppingCart" render = {props => (<ShoppingCart {...props} cartItems={cartItems} addProduct={addProduct} removeProduct={removeProduct}/>)} />
+          <Route path="/ShoppingCart" render = {props => (<ShoppingCart {...props} cartItems={cartItems} addProduct={addProduct} removeProduct={removeProduct} deleteProduct={deleteProduct}/>)} />
           <Route path='/Computers&Electronics' render = {props => (<ComputersElectronics {...props} addProductToCart={addProductToCart}/>)} />
           <Route path='/SmartHome' render = {props => (<SmartHome {...props} addProductToCart={addProductToCart}/>)} />
           <Route path='/Books&Movies' render = {props => (<BooksMovies {...props} addProductToCart={addProductToCart}/>)} />

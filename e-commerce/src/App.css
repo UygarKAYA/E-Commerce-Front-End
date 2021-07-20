@@ -10,7 +10,7 @@
   top: 0;
   z-index: 999;
 }
-  
+
 .HeaderContainer {
   display: flex;
   justify-content: center;
@@ -48,7 +48,7 @@
 
 .HeaderItem {
   height: 80px;
-} 
+}
 
 .HeaderLinks {
   color: white;
@@ -123,7 +123,7 @@
     opacity: 1;
     transition: all 0.5s ease-out;
     z-index: 1;
-    
+
   }
 
   .HeaderLinks {
@@ -229,7 +229,7 @@ video {
     font-size: 50px;
     margin-top: -100px;
   }
-  
+
   .homeContainer > p {
     font-size: 30px;
   }
@@ -381,9 +381,9 @@ video {
   font-size: 20px;
   margin: auto;
   color: white;
-} 
+}
 
-.ShoppingCartWithItems {
+/* .ShoppingCartWithItems {
   background-color: #040404;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -392,6 +392,107 @@ video {
   color: white;
 }
 
+.tablecontent {
+  background-color: #040404;
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  margin: auto;
+  color: white;
+} */
+
+.itemsInfo {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  text-align: center;
+  justify-content: center;
+  background-color: #040404;
+  display:grid;
+  grid-template-columns: 4fr 4fr 4fr 2fr 2fr;
+}
+
+.itemsInfo .productImage img {
+  width: 11rem;
+  height: 7rem;
+  filter: drop-shadow(0rem 0rem 0.2rem white);
+  border-radius: 1rem;
+}
+
+.productTitle {
+  text-align: center;
+  justify-self: center;
+  vertical-align: middle;
+}
+
+.itemsInfo .productTitle p {
+  font-size: 17.5px;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.plus-qty-minus {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.plus-qty-minus button {
+  border: none;
+  background-color: transparent;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  font-size: 15px;
+  border: 0.141rem solid white;
+  border-radius: 0.5rem;
+  width: 2.7rem;
+  height: 2.7rem;
+}
+
+.plus-qty-minus input {
+  width: 5rem;
+  border: 0.141rem solid white;
+  font-size: 1.6rem;
+  text-align: center;
+  color: white;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  background-color: transparent;
+}
+
+.plus-qty-minus input:focus {
+  outline: none;
+}
+
+.productPrice {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.productPrice h3 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: var(--main-color);
+}
+
+.deleteProduct {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 5rem;
+}
+
+.deleteProduct button {
+  border: none;
+  background-color: transparent;
+  color: white;
+}
 /* .footer-header:hover {
   border-bottom: 4px solid whitesmoke;
   text-decoration: none;

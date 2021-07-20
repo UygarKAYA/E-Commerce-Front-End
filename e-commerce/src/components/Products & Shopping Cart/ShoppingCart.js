@@ -2,7 +2,7 @@ import React from 'react'
 
 function ShoppingCart(props) {
 
-    const {cartItems} = props;    
+    const {cartItems, deleteProduct} = props;    
     const {addProduct, removeProduct} = props;
 
     return (
@@ -17,39 +17,26 @@ function ShoppingCart(props) {
                 <div className="ShoppingCartWithItems">
                     {cartItems.map((items) => (
                         <div className="row" key={items.id}>
-                            <table class="table table-sm table-dark">
-                                <thead>
-                                    <tr>
-                                        <th scope="col"><i>#</i></th>
-                                        <th scope="col"><i>Product Name</i></th>
-                                        <th scope="col"><i>Product Price</i></th>
-                                        <th scope="col"><i>Product Count</i></th>
-                                        <th scope="col"><i>Delete</i></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row"><i>{Math.max.apply(null, cartItems.map(item => item.id))}</i></th>
-                                        <td className="col-3"><i>{items.name}</i></td>
-                                        <td><i>$ {items.price}</i></td>
-                                        <td><i>{items.qty} &nbsp; </i>
-                                            <button onClick={()=>addProduct(items)} className="addProduct">+</button>
-                                            <button onClick={()=>removeProduct(items)} className="removeProduct">-</button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                            {/* <div className="col-4">
-                                {items.name}
+                            <div className="itemsInfo">
+                                <div className="productImage">
+                                    <img src={items.image} alt={items.name} />
+                                </div>
+                                <div className="productTitle">
+                                    <h4><i>{items.name}</i></h4>
+                                    <p><i>{items.description_1}</i></p>
+                                </div>
+                                <div className="plus-qty-minus">
+                                    <button onClick={()=>addProduct(items)} className="addProduct"><i class="fas fa-plus add"></i></button>
+                                    <input type="text" placeholder="1" min="1" value={items.qty}/>
+                                    <button onClick={()=>removeProduct(items)} className="removeProduct"><i class="far fa-minus minus"></i></button>
+                                </div>
+                                <div className="productPrice">
+                                    <h5><i>$ {items.price}</i></h5>
+                                </div>
+                                <div className="deleteProduct">
+                                    <button onClick={()=>deleteProduct(items)} className="addProduct"><i class="fas fa-trash-alt"></i></button>
+                                </div>
                             </div>
-                            <div className="col-2">
-                                <button onClick={()=>addProduct(items)} className="addProduct">+</button>
-                                <button onClick={()=>removeProduct(items)} className="removeProduct">-</button>
-                            </div>
-                            <div className="col-2 text-right">
-                                {items.qty} x ${items.price}
-                            </div> */}
                         </div>
                     ))}
                 </div>
