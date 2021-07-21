@@ -478,3 +478,15 @@ video {
   justify-content: center;
   align-items: center;
 }
+
+table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 3px;
+  text-align: left;
+}
