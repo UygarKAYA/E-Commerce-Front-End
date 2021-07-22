@@ -2,8 +2,9 @@ import React from 'react'
 
 function ShoppingCart(props) {
 
-    const {cartItems, deleteProduct} = props;    
+    const {cartItems} = props;    
     const {addProduct, removeProduct} = props;
+    const {deleteProduct, deleteAllItems} = props;
 
     const itemsPrice = cartItems.reduce((a,c) => a+c.qty * c.price, 0);
     const taxPrice = itemsPrice*0.05;
@@ -45,57 +46,36 @@ function ShoppingCart(props) {
                         </div>
                     ))}
 
-                    { cartItems.length !==0 && ( 
-                        <table style={{width: "100%"}}>
-                            <tr>
-                                <td><i>Items Cost</i></td>
-                                <td>${itemsPrice.toFixed(2)}</td>
-                            </tr>
-                            <tr>
-                                <td><i>Tax Cost</i></td>
-                                <td>${taxPrice.toFixed(2)}</td>
-                            </tr>
-                            <tr>
-                                <td><i>Shipping Cost</i></td>
-                                <td>${shippingPrice.toFixed(2)}</td>
-                            </tr>
-                            <tr>
-                                <td><strong><i>Total Cost</i></strong></td>
-                                <td><strong><i>${totalPrice.toFixed(2)}</i></strong></td>
-                            </tr>
-                        </table>
-                    //     <>
-                    //     <div className="row">
-                    //       <div className="col-2"><i>Items Cost</i></div>
-                    //       <div className="col text-right">${itemsPrice.toFixed(2)}</div>
-                    //     </div>
-                    //     <div className="row">
-                    //       <div className="col-2"><i>Tax Cost</i></div>
-                    //       <div className="col-1 text-right">${taxPrice.toFixed(2)}</div>
-                    //     </div>
-                    //     <div className="row">
-                    //       <div className="col-2"><i>Shipping Cost</i></div>
-                    //       <div className="col-1 text-right">
-                    //         ${shippingPrice.toFixed(2)}
-                    //       </div>
-                    //     </div>
-            
-                    //     <div className="row">
-                    //       <div className="col-2">
-                    //         <strong><i>Total Cost</i></strong>
-                    //       </div>
-                    //       <div className="col-1 text-right">
-                    //         <strong><i>${totalPrice.toFixed(2)}</i></strong>
-                    //       </div>
-                    //     </div>
-                    //     <hr />
-                    //     <div className="row">
-                    //       <button onClick={() => alert('Implement Checkout!')}>
-                    //         <i>Checkout</i>
-                    //       </button>
-                    //     </div>
-                    //   </>
-                    )}
+                    { cartItems.length !==0 && (
+                        <div>
+                            <table style={{width: "100%"}}>
+                                <tr>
+                                    <td><i>Items Cost</i></td>
+                                    <td><i>${itemsPrice.toFixed(2)}</i></td>
+                                </tr>
+                                <tr>
+                                    <td><i>Tax Cost</i></td>
+                                    <td><i>${taxPrice.toFixed(2)}</i></td>
+                                </tr>
+                                <tr>
+                                    <td><i>Shipping Cost</i></td>
+                                    <td><i>${shippingPrice.toFixed(2)}</i></td>
+                                </tr>
+                                <tr>
+                                    <td><strong><i>Total Cost</i></strong></td>
+                                    <td><strong><i>${totalPrice.toFixed(2)}</i></strong></td>
+                                </tr>
+                            </table>
+                            <div className="ShoppingCartButton">
+                                <button onClick={()=>deleteAllItems()}>
+                                    Delete All Items
+                                </button>
+                                <button className="ShoppingCartButtonCheckout">
+                                    Checkout
+                                </button>
+                            </div>    
+                        </div>
+                    )}     
                 </div>
             </div>
         </div>        

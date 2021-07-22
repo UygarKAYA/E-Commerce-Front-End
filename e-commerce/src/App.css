@@ -401,7 +401,7 @@ video {
 .itemsInfo .productImage img {
   width: 11rem;
   height: 7rem;
-  filter: drop-shadow(0rem 0rem 0.2rem white);
+  filter: drop-shadow(0rem 0rem 0.4rem white);
   border-radius: 1rem;
 }
 
@@ -411,7 +411,7 @@ video {
 
 .itemsInfo .productTitle p {
   font-size: 17.5px;
-  
+
 }
 
 .plus-qty-minus {
@@ -487,7 +487,7 @@ table, th, td {
   justify-content: center;
   margin-top: 10px;
   margin-bottom: 10px;
-  margin-left: 46%; 
+  margin-left: 46%;
 }
 
 th, td {
@@ -495,4 +495,27 @@ th, td {
   padding-bottom: 3px;
   padding-left: 3px;
   text-align: left;
+}
+
+.ShoppingCartButton button {
+  border: none;
+  background-color: transparent;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  border: 0.141rem solid white;
+  border-radius: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  position: relative;
+  right: -810px;
+}
+
+.ShoppingCartButtonCheckout {
+  width: 135px;
+}
+
+.ShoppingCartButton button:hover {
+  background-color: #A7A700;
 }
