@@ -50,28 +50,28 @@ function ShoppingCart(props) {
                         <div>
                             <table style={{width: "100%"}}>
                                 <tr>
-                                    <td><i>Items Cost</i></td>
+                                    <td><i>Items Price</i></td>
                                     <td><i>${itemsPrice.toFixed(2)}</i></td>
                                 </tr>
                                 <tr>
-                                    <td><i>Tax Cost</i></td>
+                                    <td><i>Tax Price</i></td>
                                     <td><i>${taxPrice.toFixed(2)}</i></td>
                                 </tr>
                                 <tr>
-                                    <td><i>Shipping Cost</i></td>
+                                    <td><i>Shipping Price</i></td>
                                     <td><i>${shippingPrice.toFixed(2)}</i></td>
                                 </tr>
                                 <tr>
-                                    <td><strong><i>Total Cost</i></strong></td>
+                                    <td><strong><i>Total Price</i></strong></td>
                                     <td><strong><i>${totalPrice.toFixed(2)}</i></strong></td>
                                 </tr>
                             </table>
                             <div className="ShoppingCartButton">
                                 <button onClick={()=>deleteAllItems()}>
-                                    Delete All Items
+                                    <i>Delete All Items</i>
                                 </button>
                                 <button className="ShoppingCartButtonCheckout">
-                                    Checkout
+                                    <i>Checkout</i>
                                 </button>
                             </div>    
                         </div>

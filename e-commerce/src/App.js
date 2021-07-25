@@ -52,7 +52,7 @@ function App() {
   };
 
   const deleteAllItems = (product) => {
-    setCartItems(cartItems.filter((x) => x.id !== product.id));
+    setCartItems([]);
   }
 
   return (
