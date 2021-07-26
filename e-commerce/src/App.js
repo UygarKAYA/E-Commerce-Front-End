@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import {Header, Home, SingUp, SingIn, Footer} from './components';
-import {Products, ShoppingCart} from './components';
+import {Products, ShoppingCart, Checkout} from './components';
 import {ComputersElectronics, SmartHome, BooksMovies} from './components';
 import {Fashion, CosmeticsPersonalCare} from './components';
 
@@ -70,6 +70,7 @@ function App() {
           <Route path='/Books&Movies' render = {props => (<BooksMovies {...props} addProductToCart={addProductToCart}/>)} />
           <Route path='/Fashion' render = {props => (<Fashion {...props} addProductToCart={addProductToCart}/>)} />
           <Route path='/Cosmetics&PersonalCare' render = {props => (<CosmeticsPersonalCare {...props} addProductToCart={addProductToCart}/>)} />
+          <Route path='/Checkout' exact component={Checkout}/>
         </Switch>
         <Footer />
       </BrowserRouter> 

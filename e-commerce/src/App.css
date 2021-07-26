@@ -513,9 +513,32 @@ th, td {
 }
 
 .ShoppingCartButtonCheckout {
-  width: 135px;
+  /* width: 550px; */
+  border: none;
+  background-color: transparent;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  border: 0.141rem solid white;
+  border-radius: 0.5rem;
+  justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  align-items: center;
+  margin-right: 10px;
+  padding-right: 26px;
+  padding-left: 26px;
+  padding-bottom: 2.5px;
+  padding-top: 2.01px;
+  position: relative;
+  right: -810px;
 }
 
 .ShoppingCartButton button:hover {
   color: #219C93;
+}
+
+.ShoppingCartButtonCheckout:hover {
+  color: #219C93;
+  text-decoration: none;
 }

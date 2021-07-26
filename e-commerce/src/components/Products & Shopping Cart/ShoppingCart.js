@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 function ShoppingCart(props) {
 
@@ -70,12 +71,10 @@ function ShoppingCart(props) {
                                 <button onClick={()=>deleteAllItems()}>
                                     <i>Delete All Items</i>
                                 </button>
-                                <button className="ShoppingCartButtonCheckout">
-                                    <i>Checkout</i>
-                                </button>
-                            </div>    
+                                <Link to="/Checkout" className="ShoppingCartButtonCheckout"><i>Checkout</i></Link>
+                            </div>
                         </div>
-                    )}     
+                    )}
                 </div>
             </div>
         </div>        
