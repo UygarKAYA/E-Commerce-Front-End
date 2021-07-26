@@ -1,16 +1,19 @@
 import React, {useState} from 'react'
 import useStyle from './CheckoutStyle'
 
+import AddressForm from '../AddressForm'
+import OrderDetails from '../OrderDetails'
+import Conformation from '../Conformation'
 import '../../../App.css'
 
-import {CssBaseline, Paper, Stepper, Step, StepLabel} from '@material-ui/core';
-import {Typography, CircularProgress, Divider, Button} from '@material-ui/core';
+import {Paper, Stepper, Step, StepLabel, Typography} from '@material-ui/core';
 
-const steps = ['Shipping Address', 'Payment Details'];
+const steps = ['Shipping Address', 'Order Details'];
 
 function Checkout() {
 
-    const [activeStep, setActiveStep] = useState(0);
+    const [activeStep] = useState(0);
+    const Form = () => activeStep === 0 ? <AddressForm /> : <OrderDetails />
     const class_ = useStyle();
 
     return (
@@ -26,6 +29,7 @@ function Checkout() {
                                 </Step>
                             ))}
                         </Stepper>
+                        {activeStep === steps.length ? <Conformation /> : <Form />}
                     </Paper>
                 </main>
             </div>

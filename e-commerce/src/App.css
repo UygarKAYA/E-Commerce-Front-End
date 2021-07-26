@@ -551,3 +551,30 @@ th, td {
   display: flex;
   justify-content: center;
 }
+
+/* For AddressForm Shopping Cart */
+.AddressFormShoppingCart {
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 0.5rem;
+  margin-right: 200px;
+  padding: 10px 26px;
+}
+
+.AddressFormShoppingCart:hover {
+  text-decoration: none;
+}
+
+/* For AddressForm Order Details */
+.AddressFormOrderDetails {
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 0.5rem;
+  padding: 10px 26px;
+}
+
+.AddressFormOrderDetails:hover {
+  text-decoration: none;
+}
