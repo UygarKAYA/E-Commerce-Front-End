@@ -3,18 +3,22 @@ import useStyle from './CheckoutStyle'
 
 import AddressForm from '../AddressForm'
 import OrderDetails from '../OrderDetails'
-import Conformation from '../Conformation'
 import '../../../App.css'
 
-import {Paper, Stepper, Step, StepLabel, Typography} from '@material-ui/core';
+import {Step, Button, Typography} from '@material-ui/core';
+import {StepLabel, Paper, Stepper} from '@material-ui/core';
 
 const steps = ['Shipping Address', 'Order Details'];
 
-function Checkout() {
+function Checkout(props) {
 
-    const [activeStep] = useState(0);
+    const [activeStep, setActiveStep] = useState(0);
     const Form = () => activeStep === 0 ? <AddressForm /> : <OrderDetails />
     const class_ = useStyle();
+    const {deleteAllItems} = props;
+
+    const handleNext = () => { setActiveStep(activeStep + 1); };
+    const handleBack = () => { setActiveStep(activeStep - 1); };
 
     return (
         <div className="checkout">
@@ -29,7 +33,29 @@ function Checkout() {
                                 </Step>
                             ))}
                         </Stepper>
-                        {activeStep === steps.length ? <Conformation /> : <Form />}
+                        <div>
+                            {activeStep === steps.length ? (
+                            <div>
+                                <Typography variant='h5' gutterBottom align='center'> <i>Thank you for your order</i></Typography>
+                                <Typography variant='subtitle1' align='center'>
+                                    <i>Your order number is #{Math.floor(Math.random() * 5000) + 1}. We have e-mailed your 
+                                        order confirmation, and will send you an update e-mail when your order has shipped.</i>
+                                </Typography>
+                            </div>
+                            ) : (
+                            <div>
+                                {<Form />}
+                                <div className={class_.buttons}>
+                                    {activeStep !== 0 && (
+                                        <Button onClick={handleBack} className={class_.button} color="primary"><i>Back</i></Button>
+                                    )}
+                                    <Button onClick={() => { handleNext(); deleteAllItems(); }} className={class_.button} color="primary" variant="contained">
+                                        <i>{activeStep === steps.length - 1 ? 'Place Order' : 'Next'}</i>
+                                    </Button>
+                                </div>
+                            </div>
+                            )}
+                        </div>
                     </Paper>
                 </main>
             </div>

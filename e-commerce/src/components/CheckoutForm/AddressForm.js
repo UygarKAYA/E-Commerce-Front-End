@@ -1,10 +1,10 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
 
 import {Grid, Typography} from '@material-ui/core';
 import CustomerText from './CustomerText';
 
 function AddressForm() {
+
     return (
         <div>
             <Typography variant="h5" align="center" gutterBottom><i>Shipping Address</i></Typography>
@@ -32,10 +32,6 @@ function AddressForm() {
                 </Grid>
                 <Grid item xs={12} sm={6}>
                     <CustomerText required name='Zip/Postal Code' label='Zip/Postal Code'/>
-                </Grid>
-                <Grid item xs={12}>
-                    <Link to='/ShoppingCart' className="AddressFormShoppingCart"><i>Back to Shopping Cart</i></Link>
-                    <Link to='/OrderDetails' className="AddressFormOrderDetails"><i>Order Details</i></Link>
                 </Grid>
             </Grid>
         </div>
