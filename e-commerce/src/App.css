@@ -342,6 +342,7 @@ video {
   font-size: 20px;
 }
 
+/* For Categories */
 .categories {
   background-color: #040404;
   padding-top: 26.5px;
@@ -361,6 +362,7 @@ video {
   border-bottom: 2px solid #8C5D00;
 }
 
+/* For ShoppingCart */
 .ShoppingCart{
   background-color: #040404;
   max-height: 100%;
@@ -513,7 +515,6 @@ th, td {
 }
 
 .ShoppingCartButtonCheckout {
-  /* width: 550px; */
   border: none;
   background-color: transparent;
   color: white;
@@ -541,4 +542,12 @@ th, td {
 .ShoppingCartButtonCheckout:hover {
   color: #219C93;
   text-decoration: none;
+}
+
+/* For Checkout Form */
+.checkout {
+  background-color: #040404;
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
 }
