@@ -13,6 +13,7 @@ function OrderDetails({cartItems}) {
     return (
         <div>
             <Typography variant='h5' align='center' gutterBottom><i>Order Details</i></Typography>
+            <ListItemText style={{fontStyle: 'italic'}} align='center' primary='Payment Method: Cash on Delivery'/>
             <Divider />
             <List disablePadding>
                 {cartItems.map((items) => (
@@ -22,10 +23,11 @@ function OrderDetails({cartItems}) {
                     </ListItem>    
                 ))}
                 <Divider />
-                    <ListItem style={{padding: '10px 0'}}>
-                        <ListItemText style={{fontStyle: 'italic'}} primary='Total Price'/>
-                        <Typography><strong><i>${totalPrice.toFixed(2)}</i></strong></Typography>
-                    </ListItem>
+                <ListItem style={{padding: '10px 0'}}>
+                    <ListItemText style={{fontStyle: 'italic'}} primary='Total Price'/>
+                <Typography><strong><i>${totalPrice.toFixed(2)}</i></strong></Typography>
+                </ListItem>
+                <Divider />
             </List>
         </div>
     )
