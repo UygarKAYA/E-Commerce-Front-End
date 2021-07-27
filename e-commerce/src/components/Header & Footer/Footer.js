@@ -64,11 +64,9 @@ function Footer() {
                     </div>
                 </div>
             </div>
-
             <div className="container">
                 <div className="footer-div-hr"></div>
-            </div>  
-
+            </div>
             <div className="container">
                 <div className="row" style={{color: "#EAA908"}}>
                     <p className="col-md-8 col-sm-6 col-xs-12">
