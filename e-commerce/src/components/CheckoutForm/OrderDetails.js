@@ -7,7 +7,7 @@ function OrderDetails({cartItems}) {
 
     const itemsPrice = cartItems.reduce((a,c) => a+c.qty * c.price, 0);
     const taxPrice = itemsPrice*0.05;
-    const shippingPrice = itemsPrice > 2000 ? 0 : 5;
+    const shippingPrice = (itemsPrice > 2000 || itemsPrice === 0) ? 0 : 5;
     const totalPrice = itemsPrice > 0 ? (itemsPrice + taxPrice + shippingPrice) : 0;
 
     return (
@@ -17,7 +17,7 @@ function OrderDetails({cartItems}) {
             <Divider />
             <List disablePadding>
                 {cartItems.map((items) => (
-                    <ListItem style={{padding: '3px 0'}} key={items.name}>
+                    <ListItem style={{padding: '0px 0'}} key={items.name}>
                         <ListItemText style={{fontStyle: 'italic'}} primary={items.name} secondary={`Quantity: ${items.qty}`} />
                         <Typography><strong><i>${(items.price * items.qty).toFixed(2)}</i></strong></Typography>
                         <Divider />
