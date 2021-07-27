@@ -17,16 +17,28 @@ function OrderDetails({cartItems}) {
             <Divider />
             <List disablePadding>
                 {cartItems.map((items) => (
-                    <ListItem style={{padding: '10px 0'}} key={items.name}>
+                    <ListItem style={{padding: '3px 0'}} key={items.name}>
                         <ListItemText style={{fontStyle: 'italic'}} primary={items.name} secondary={`Quantity: ${items.qty}`} />
                         <Typography><strong><i>${(items.price * items.qty).toFixed(2)}</i></strong></Typography>
+                        <Divider />
                     </ListItem>    
                 ))}
                 <Divider />
-                <ListItem style={{padding: '10px 0'}}>
-                    <ListItemText style={{fontStyle: 'italic'}} primary='Total Price'/>
-                <Typography><strong><i>${totalPrice.toFixed(2)}</i></strong></Typography>
+                <ListItem style={{padding: '0px 0'}}>
+                    <ListItemText style={{fontStyle: 'italic'}} primary='Tax Price'/>
+                    <Typography><strong><i>${taxPrice.toFixed(2)}</i></strong></Typography>
                 </ListItem>
+
+                <ListItem style={{padding: '0px 0'}}>
+                    <ListItemText style={{fontStyle: 'italic'}} primary='Shipping Price'/>
+                    <Typography><strong><i>${shippingPrice.toFixed(2)}</i></strong></Typography>
+                </ListItem>
+
+                <ListItem style={{padding: '0px 0'}}>
+                    <ListItemText style={{fontStyle: 'italic'}} primary='Total Price'/>
+                    <Typography><strong><i>${totalPrice.toFixed(2)}</i></strong></Typography>
+                </ListItem>
+
                 <Divider />
             </List>
         </div>
