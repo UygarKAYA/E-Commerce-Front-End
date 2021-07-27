@@ -16,7 +16,7 @@ function AddressForm() {
                     <CustomerText required name='Last Name' label='Last Name'/>
                 </Grid>
                 <Grid item xs={12}>
-                    <CustomerText required name='E-mail' label='E-mail'/>
+                    <CustomerText required type='email' name='E-mail' label='E-mail'/>
                 </Grid>
                 <Grid item xs={12}>
                     <CustomerText required name='Address' label='Address'/>
