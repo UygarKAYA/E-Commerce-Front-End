@@ -70,7 +70,7 @@ function App() {
           <Route path='/Books&Movies' render = {props => (<BooksMovies {...props} addProductToCart={addProductToCart}/>)} />
           <Route path='/Fashion' render = {props => (<Fashion {...props} addProductToCart={addProductToCart}/>)} />
           <Route path='/Cosmetics&PersonalCare' render = {props => (<CosmeticsPersonalCare {...props} addProductToCart={addProductToCart}/>)} />
-          <Route path='/Checkout' render = {props => (<Checkout {...props} deleteAllItems={deleteAllItems}/>)}/>
+          <Route path='/Checkout' render = {props => (<Checkout {...props} cartItems={cartItems} deleteAllItems={deleteAllItems}/>)}/>
         </Switch>
         <Footer />
       </BrowserRouter> 

@@ -18,7 +18,7 @@ function ShoppingCart(props) {
                 {
                     cartItems.length === 0 && 
                     <div className="ShopingCartNoItems">
-                        <i>No products have been added to the E-Commerce Shopping Cart</i>
+                        <i>No products have been added to the Shopping Cart</i>
                     </div>
                 }
                 <div className="ShoppingCartWithItems">

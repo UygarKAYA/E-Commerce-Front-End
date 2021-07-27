@@ -435,6 +435,11 @@ video {
   height: 2.7rem;
 }
 
+.plus-qty-minus button:hover {
+  color: #219C93;
+  border: 0.141rem solid #219C93;
+}
+
 .plus-qty-minus input {
   width: 4rem;
   border: 0.141rem solid white;
@@ -479,6 +484,11 @@ video {
   height: 2.7rem;
   justify-content: center;
   align-items: center;
+}
+
+.deleteProduct button:hover {
+  color: #219C93;
+  border: 0.141rem solid #219C93;
 }
 
 table, th, td {
@@ -537,11 +547,13 @@ th, td {
 
 .ShoppingCartButton button:hover {
   color: #219C93;
+  border: 0.141rem solid #219C93;
 }
 
 .ShoppingCartButtonCheckout:hover {
   color: #219C93;
   text-decoration: none;
+  border: 0.141rem solid #219C93;
 }
 
 /* For Checkout Form */

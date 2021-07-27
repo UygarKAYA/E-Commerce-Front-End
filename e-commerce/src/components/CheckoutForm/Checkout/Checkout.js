@@ -10,12 +10,11 @@ import {StepLabel, Paper, Stepper} from '@material-ui/core';
 
 const steps = ['Shipping Address', 'Order Details'];
 
-function Checkout(props) {
+function Checkout({deleteAllItems, cartItems}) {
 
     const [activeStep, setActiveStep] = useState(0);
-    const Form = () => activeStep === 0 ? <AddressForm /> : <OrderDetails />
+    const Form = () => activeStep === 0 ? <AddressForm /> : <OrderDetails cartItems={cartItems}/>
     const class_ = useStyle();
-    const {deleteAllItems} = props;
 
     const handleNext = () => { setActiveStep(activeStep + 1); };
     const handleBack = () => { setActiveStep(activeStep - 1); };
@@ -47,11 +46,20 @@ function Checkout(props) {
                                 {<Form />}
                                 <div className={class_.buttons}>
                                     {activeStep !== 0 && (
-                                        <Button onClick={handleBack} className={class_.button} color="primary"><i>Back</i></Button>
+                                        <Button onClick={handleBack} className={class_.button} color="primary">
+                                            <i>Back</i>
+                                        </Button>
                                     )}
-                                    <Button onClick={() => { handleNext(); deleteAllItems(); }} className={class_.button} color="primary" variant="contained">
-                                        <i>{activeStep === steps.length - 1 ? 'Place Order' : 'Next'}</i>
-                                    </Button>
+                                    {activeStep === steps.length - 1 && (
+                                        <Button onClick={() => { deleteAllItems(); handleNext(); }} className={class_.button} color="primary" variant="contained">
+                                            <i>Place Order</i>
+                                        </Button>
+                                    )}
+                                    {activeStep !== steps.length - 1 && (
+                                        <Button onClick={() => { handleNext(); }} className={class_.button} color="primary" variant="contained">
+                                            <i>Next</i>
+                                        </Button>
+                                    )}
                                 </div>
                             </div>
                             )}
