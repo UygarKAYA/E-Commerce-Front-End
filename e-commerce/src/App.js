@@ -5,6 +5,7 @@ import {Header, Home, SingUp, SingIn, Footer} from './components';
 import {Products, ShoppingCart, Checkout} from './components';
 import {ComputersElectronics, SmartHome, BooksMovies} from './components';
 import {Fashion, CosmeticsPersonalCare} from './components';
+import {ProductRequest} from './components';
 
 import './App.css';
 
@@ -71,6 +72,7 @@ function App() {
           <Route path='/Fashion' render = {props => (<Fashion {...props} addProductToCart={addProductToCart}/>)} />
           <Route path='/Cosmetics&PersonalCare' render = {props => (<CosmeticsPersonalCare {...props} addProductToCart={addProductToCart}/>)} />
           <Route path='/Checkout' render = {props => (<Checkout {...props} cartItems={cartItems} deleteAllItems={deleteAllItems}/>)}/>
+          <Route path='/ProductRequest' exact component={ProductRequest}/>
         </Switch>
         <Footer />
       </BrowserRouter> 

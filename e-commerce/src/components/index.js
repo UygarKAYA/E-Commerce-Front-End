@@ -6,6 +6,7 @@ export {default as Checkout} from './CheckoutForm/Checkout/Checkout'
 export {default as SingUp} from './Sing Up & Sing In/SingUp'
 export {default as SingIn} from './Sing Up & Sing In/SingIn'
 export {default as Footer} from './Header & Footer/Footer'
+export {default as ProductRequest} from './Add New Product Request/ProductRequest'
 
 export {default as ComputersElectronics} from './Categories/Computers&Electronics'
 export {default as SmartHome} from './Categories/SmartHome'
