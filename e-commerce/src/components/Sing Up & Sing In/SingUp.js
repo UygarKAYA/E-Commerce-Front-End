@@ -21,7 +21,7 @@ function SingUp() {
 
     const postSingUpToMongoDB = SingUpData => {
         axios.post('http://localhost:8080/api/users/addUser', SingUpData)
-                .then(response => { alert("User Successfully Created"); })
+                .then(alert("User Successfully Created"))
                     .catch(error => alert(error));
     }
 
