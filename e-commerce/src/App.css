@@ -587,10 +587,12 @@ th, td {
 
 .productRequest {
   background-color: #040404;
-  max-height: 100%;
-  display: flex;
-  justify-content: center;
+}
+
+.productRequestInfo {
   font-size: 20px;
-  margin: auto;
-  color: white;
+}
+
+.productRequestTable {
+  text-align: center;
 }
