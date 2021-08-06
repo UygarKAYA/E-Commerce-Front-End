@@ -278,12 +278,15 @@ video {
   max-height: 100%;
   display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 20px;
   color: white;
 }
 
 .sign-up-h1 {
   padding: 3px;
+  /* border: 0.141rem solid white;
+  border-radius: 0.5rem;
+  margin-bottom: 5px; */
   max-height: 100%;
   text-align: center;
   display: flex;
@@ -292,23 +295,37 @@ video {
   color: #D18168;
 }
 
-.sign-up-button {
-  padding: 3px;
-  max-height: 100%;
-  display: flex;
-  justify-content: center;
-  font-size: 25px;
+.sign-up-info :hover {
+  color: #F034B4;
 }
 
+.sign-up-button button {
+  background-color: transparent;
+  color: white;
+  max-height: 100%;
+  font-size: 25px;
+  margin-left: 380px;
+  border: 0.141rem solid white;
+  border-radius: 0.5rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.sign-up-button button :hover {
+  color: #219C93;
+}
 /* For Sing In */
 .sing-in {
   background-color: #040404;
-  padding-top: 26.5px;
-  padding-bottom: 26.5px;
+  padding-top: 32.5px;
+  padding-bottom: 32.5px;
   max-height: 100%;
   display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 20px;
   color: white;
 }
 
@@ -322,14 +339,18 @@ video {
   color: #D18168;
 }
 
-.sign-in-button {
-  padding: 3px;
-  max-height: 100%;
-  display: flex;
-  justify-content: center;
+.sign-in-button button {
   font-size: 25px;
+  color: white;
+  background-color: transparent;
+  border: 0.141rem solid white;
+  border-radius: 0.5rem;
+  margin-left: 270px;
 }
 
+.sign-in-button button :hover{
+  color: #219C93;
+}
 
 /* For Products */
 .products {
@@ -562,4 +583,14 @@ th, td {
   max-height: 100%;
   display: flex;
   justify-content: center;
+}
+
+.productRequest {
+  background-color: #040404;
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  margin: auto;
+  color: white;
 }
