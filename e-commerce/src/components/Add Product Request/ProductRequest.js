@@ -49,8 +49,35 @@ class ProductRequest extends Component {
             })
     }
 
-    productRequestToMongoDB() {
-        alert("The Request has been Successfully Added")
+    productRequestToMongoDB(event) {
+        
+        event.preventDefault();
+
+        const productRequestData = {
+            productName: this.state.name,
+            productPrice: this.state.price, 
+            productCategories: this.state.categories, 
+            firstDescription: this.state.description1,
+            secondDescription: this.state.description2,
+            thirdDescription: this.state.description3
+        }
+
+        axios.post("http://localhost:8080/api/requestProducts/addRequestProducts", productRequestData)
+            .then(response => {
+                if(response.data != null) {
+                    alert("The Request has been Successfully Added");
+                    this.setState(this.defaultData);
+                }
+            })
+    }
+
+    deleteRequestProduct = (requestProductID) => {
+        axios.delete("http://localhost:8080/api/requestProducts/deletePurchasedProducts/" + requestProductID)
+            .then(
+                this.setState({
+                    requestProduct: this.state.requestProduct.filter(requestProductt => requestProductt.id !== requestProductID)
+                })
+            )
     }
 
     render() {
@@ -125,16 +152,18 @@ class ProductRequest extends Component {
                                         </Form.Group>
                                     </Form.Row>
                                 </Card.Body>
-                                <Card.Footer style={{textAlign: 'right'}}>
-                                    <Button variant="success" type="submit">
-                                        <i class="far fa-hdd"></i> &nbsp;
-                                        <i>Add New Request</i>
-                                    </Button>
-                                    &nbsp;
-                                    <Button variant="info" type="reset">
-                                        <i class="fas fa-undo"></i> &nbsp;
-                                        <i>Reset</i>
-                                    </Button>
+                                <Card.Footer>
+                                    <div style={{textAlign: 'right'}}>
+                                        <Button variant="success" type="submit">
+                                            <i class="far fa-hdd"></i> &nbsp;
+                                            <i>Add New Request</i>
+                                        </Button>
+                                        &nbsp;
+                                        <Button variant="info" type="reset">
+                                            <i class="fas fa-undo"></i> &nbsp;
+                                            <i>Reset</i>
+                                        </Button>
+                                    </div>
                                 </Card.Footer>
                             </Form>
                         </Card>    
@@ -150,12 +179,12 @@ class ProductRequest extends Component {
                                     <Table bordered hover striped variant="dark">
                                         <thead>
                                             <tr>
-                                                <th style={{paddingRight: '47px', paddingLeft: '47px'}}><i>Name</i></th>
+                                                <th style={{paddingRight: '47px', paddingLeft: '48px'}}><i>Name</i></th>
                                                 <th style={{paddingRight: '20px', paddingLeft: '20px'}}><i>Price</i></th>
-                                                <th style={{paddingRight: '35px', paddingLeft: '35px'}}><i>Categories</i></th>
-                                                <th style={{paddingRight: '45px', paddingLeft: '45px'}}><i>Description</i></th>
-                                                <th style={{paddingRight: '45px', paddingLeft: '45px'}}><i>Description</i></th>
-                                                <th style={{paddingRight: '45px', paddingLeft: '45px'}}><i>Description</i></th>
+                                                <th style={{paddingRight: '35px', paddingLeft: '36px'}}><i>Categories</i></th>
+                                                <th style={{paddingRight: '47px', paddingLeft: '48px'}}><i>Description</i></th>
+                                                <th style={{paddingRight: '47px', paddingLeft: '48px'}}><i>Description</i></th>
+                                                <th style={{paddingRight: '47px', paddingLeft: '48px'}}><i>Description</i></th>
                                                 <th style={{paddingRight: '20px', paddingLeft: '20px'}}><i>Actions</i></th>
                                             </tr>
                                         </thead>
@@ -178,7 +207,7 @@ class ProductRequest extends Component {
                                                                 <ButtonGroup>
                                                                     <Button size='sm' variant='outline-primary'><i class="far fa-edit"></i></Button>
                                                                     &nbsp;
-                                                                    <Button size='sm' variant='outline-danger'><i class="fas fa-trash"></i></Button>
+                                                                    <Button size='sm' variant='outline-danger' onClick={this.deleteRequestProduct.bind(this, requestProducts.id)}><i class="fas fa-trash"></i></Button>
                                                                 </ButtonGroup>
                                                             </td>
                                                         </tr>
