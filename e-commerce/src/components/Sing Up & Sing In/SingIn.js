@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import {useHistory} from 'react-router-dom'
+import {Card, Form, Button} from 'react-bootstrap'
 import '../../App.css'
 
 function SingIn() {
@@ -11,26 +12,48 @@ function SingIn() {
 
     function MongoDBToSingIn() {
         history.push('/ProductRequest');
-    }
+    }    
 
     return (
         <div className="sing-in">
             <div className="container">
-                <div className="sign-in-h1">
-                    <h1><i>Login Your Account</i></h1>
-                </div>
-                <form onSubmit={MongoDBToSingIn}>
-                    <label><i>Username</i></label>
-                    <input type="text" className="form-control" placeholder="Username" required onChange={(e)=>setUsername(e.target.value)} style={{marginBottom: '8px'}}></input>
-                    <label><i>Password</i></label>
-                    <input type="password" className="form-control" placeholder="Password" required minLength = "8" onChange={(e)=>setPassword(e.target.value)}></input>
-                    <br />
-                    <div className="sign-in-button">
-                        <button type="submit">
-                            <i>Login your E-Commerce account to Add New Product</i>
-                        </button>
+                <Card className={"border border-dark bg-dark text-white"}>
+                    <div className="sign-in-h1">
+                        <Card.Header>
+                            <i>Login Your Account</i>
+                        </Card.Header>
                     </div>
-                </form>
+                    <div className="sign-in-form">
+                        <Form onSubmit={MongoDBToSingIn}>
+                            <Card.Body>
+                                <Form.Row>
+                                    <Form.Label><i class="fas fa-signature"></i> <i>Username</i></Form.Label>
+                                    <Form.Control type="text" required name="username"
+                                                  autoComplete="off"
+                                                  className={"bg-dark text-white"}
+                                                  style={{marginBottom: '10px'}}
+                                                  onChange={(e)=>setUsername(e.target.value)}
+                                                  placeholder="Enter Your Username" />
+
+                                    <Form.Label><i class="fas fa-key"></i> <i>Password</i></Form.Label>
+                                    <Form.Control type="password" required name="password"
+                                                  autoComplete="off" minLength = "8"
+                                                  className={"bg-dark text-white"}
+                                                  onChange={(e)=>setPassword(e.target.value)}
+                                                  placeholder="Enter Your Password" />
+                                </Form.Row>
+                            </Card.Body>
+                            <Card.Footer>
+                                <div style={{textAlign: 'right'}}>
+                                    <Button variant="success" type="submit">
+                                        <i class="far fa-hdd"></i> &nbsp;
+                                        <i>Login Your E-Commerce Account To Add New Product</i>
+                                    </Button>
+                                </div>
+                            </Card.Footer>
+                        </Form>           
+                    </div>
+                </Card>
             </div>
         </div>
     )
