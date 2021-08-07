@@ -1,5 +1,7 @@
 import React from 'react'
 import axios from 'axios'
+import {Card, Form} from 'react-bootstrap'
+import {Button} from 'react-bootstrap'
 import '../../App.css'
 
 function SingUp() {
@@ -28,33 +30,74 @@ function SingUp() {
     return (
         <div className="sing-up">
             <div className="container">
-                <div className="sign-up-h1">
-                    <h1><i>Create Account</i></h1>
-                </div>
-                <div className="sign-up-form">
-                    <form onSubmit={event => {event.preventDefault(); SingUpToMongoDB(event);}}>
-                        <label><i>Name</i></label>
-                        <input type="text" className="form-control" placeholder="Name" required style={{marginBottom: '8px'}}></input>
-                        <label><i>Surname</i></label>
-                        <input type="text" className="form-control" placeholder="Surname" required style={{marginBottom: '8px'}}></input>
-                        <label><i>E-mail</i></label>
-                        <input type="email" className="form-control" placeholder="E-mail" required style={{marginBottom: '8px'}}></input>
-                        <label><i>Username</i></label>
-                        <input type="text" className="form-control" placeholder="Username" required style={{marginBottom: '8px'}}></input>
-                        <label><i>Password</i></label>
-                        <input type="password" className="form-control" placeholder="Password" required minLength = "8"></input>
-                        <div className="sign-up-info">
-                            <label><i class="fas fa-info-circle"></i> &nbsp; 
-                                <i>Passwords must be at least 8 characters</i>
-                            </label>
-                        </div>
-                        <div className="sign-up-button">
-                            <button type="submit">
-                                <i>Create your E-Commerce account</i>
-                            </button>
-                        </div>
-                    </form>
-                </div>
+                <Card className={"border border-dark bg-dark text-white"}>
+                    <div className="sign-up-h1">
+                        <Card.Header>
+                            <i>Create Account</i>
+                        </Card.Header>
+                    </div>
+                    <div className="sign-up-form">
+                        <Form onSubmit={event => {event.preventDefault(); SingUpToMongoDB(event);}}>
+                            <Card.Body>
+                                <Form.Row>
+                                    <Form.Label><i class="fas fa-signature"></i> <i>Name</i></Form.Label>
+                                    <Form.Control type="text" required name="name"
+                                                    autoComplete="off"
+                                                    className={"bg-dark text-white"}
+                                                    style={{marginBottom: '8px'}} 
+                                                    placeholder="Enter Your Name" />
+
+                                    <Form.Label><i class="fas fa-signature"></i> <i>Surname</i></Form.Label>
+                                    <Form.Control type="text" required name="surname"
+                                                  autoComplete="off"
+                                                  className={"bg-dark text-white"} 
+                                                  style={{marginBottom: '8px'}}
+                                                  placeholder="Enter Your Surname" />
+
+                                    <Form.Label><i class="far fa-envelope"></i>&nbsp;<i>E-mail</i></Form.Label>
+                                    <Form.Control type="email" required name="email"
+                                                  autoComplete="off"
+                                                  className={"bg-dark text-white"}
+                                                  style={{marginBottom: '8px'}}
+                                                  placeholder="Enter Your E-mail" />
+
+                                    <Form.Label><i class="fas fa-signature"></i> <i>Username</i></Form.Label>
+                                    <Form.Control type="text" required name="username"
+                                                  autoComplete="off"
+                                                  className={"bg-dark text-white"}
+                                                  style={{marginBottom: '8px'}}
+                                                  placeholder="Enter Your Username" />
+
+                                    <Form.Label><i class="fas fa-key"></i> <i>Password</i></Form.Label>
+                                    <Form.Control type="password" required name="password"
+                                                  autoComplete="off" minLength = "8"
+                                                  className={"bg-dark text-white"}
+                                                  style={{marginBottom: '4px'}}
+                                                  placeholder="Enter Your Password" />
+
+                                    <div className="sign-up-info">
+                                        <label><i class="fas fa-info-circle"></i> &nbsp; 
+                                            <i>Passwords must be at least 8 characters</i>
+                                        </label>
+                                    </div>
+                                </Form.Row>
+                            </Card.Body>
+                            <Card.Footer>
+                                <div style={{textAlign: 'right'}}>
+                                    <Button variant="success" type="submit">
+                                        <i class="far fa-hdd"></i> &nbsp;
+                                        <i>Create New User</i>
+                                    </Button>
+                                    &nbsp;
+                                    <Button variant="info" type="reset">
+                                        <i class="fas fa-undo"></i> &nbsp;
+                                        <i>Reset</i>
+                                    </Button>
+                                </div>
+                            </Card.Footer>
+                        </Form>           
+                    </div>
+                </Card>
             </div>
         </div>
     )

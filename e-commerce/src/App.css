@@ -287,12 +287,8 @@ video {
   /* border: 0.141rem solid white;
   border-radius: 0.5rem;
   margin-bottom: 5px; */
-  max-height: 100%;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  font-size: 20px;
-  color: #D18168;
+  font-size: 27px;
 }
 
 .sign-up-info :hover {
