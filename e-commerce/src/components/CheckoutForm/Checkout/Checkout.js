@@ -17,19 +17,17 @@ function Checkout({deleteAllItems, cartItems}) {
     const [name, setName] = useState('')
     const [surname, setSurname] = useState('')
     const [email, setEmail] = useState('')
-    const [address_, setAddress_] = useState('')
-    const [country_, setCountry] = useState('')
-    const [city_, setCity] = useState('')
-    const [town_, setTown] = useState('')
-    const [zipCode_, setZipCode] = useState('')
+    const [address, setAddress] = useState('')
+    const [country, setCountry] = useState('')
+    const [city, setCity] = useState('')
+    const [town, setTown] = useState('')
+    const [zipCode, setZipCode] = useState('')
 
-    const Form = () => activeStep === 0 ? <AddressForm name={name} setName={setName} surname={surname} setSurname={setSurname}
-                                                            email={email} setEmail={setEmail} address_={address_} setAddress_={setAddress_}
-                                                                country_={country_} setCountry={setCountry} city_={city_} setCity={setCity}
-                                                                    town_={town_} setTown={setTown} zipCode_={zipCode_} setZipCode={setZipCode}/> 
+    const Form = () => activeStep === 0 ? <AddressForm setName={setName} setSurname={setSurname} setEmail={setEmail} setAddress={setAddress}
+                                                                setCountry={setCountry} setCity={setCity} setTown={setTown} setZipCode={setZipCode}/> 
                                         : <OrderDetails cartItems={cartItems}/>
-    
     const class_ = useStyle();
+
     const itemsPrice = cartItems.reduce((a,c) => a+c.qty * c.price, 0);
     const taxPrice = itemsPrice*0.05;
     const shippingPrice = (itemsPrice > 2000 || itemsPrice === 0) ? 0 : 5;
@@ -44,11 +42,11 @@ function Checkout({deleteAllItems, cartItems}) {
             firstName: name,
             lastName: surname,
             email: email,
-            address: address_,
-            country: country_,
-            city: city_,
-            town: town_,
-            zipCode: zipCode_,
+            address: address,
+            country: country,
+            city: city,
+            town: town,
+            zipCode: zipCode,
             productName: cartItems.name,
             productPrice: totalPrice,
             productQuantity: cartItems.qty

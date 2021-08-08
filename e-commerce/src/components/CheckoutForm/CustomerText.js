@@ -2,7 +2,7 @@ import React from 'react'
 
 import { TextField } from '@material-ui/core';
 
-function CustomerText({ name, label, required, onChange, value, type}) {
+function CustomerText({ name, label, required, onChange, type}) {
     return (
         <div className="customerText">
             <TextField 
@@ -10,7 +10,6 @@ function CustomerText({ name, label, required, onChange, value, type}) {
                 name={name} 
                 label={label}
                 onChange={onChange}
-                // value={value}
                 type={type}
                 fullWidth
             />
