@@ -6,53 +6,36 @@ import {Form, Button, Col} from 'react-bootstrap'
 class ProductRequest extends Component {
 
     constructor(props) {
-        super(props)
-
+        super(props);
         this.state = {
             requestProduct: [],
-            name: '',
-            price: '', 
-            categories: '', 
-            description1: '',
-            description2: '',
-            description3: ''
+            name: '', price: '', categories: '', 
+                description1: '', description2: '', description3: ''
         }
 
         this.productRequestToMongoDB = this.productRequestToMongoDB.bind(this)
         this.submitChange = this.submitChange.bind(this)
     }
 
-    defaultData = {
-        name: '',
-        price: '', 
-        categories: '', 
-        description1: '',
-        description2: '',
-        description3: ''
+    requestProductDefaultData = {
+        name: '', price: '', categories: '', 
+            description1: '', description2: '', description3: ''
     }
 
-    submitChange = event => {
-        this.setState ({
-            [event.target.name]: event.target.value
-        })
-    }
+    submitChange = event => {this.setState ({ [event.target.name]: event.target.value })}
+    resetProduct = () => {this.setState(() => this.requestProductDefaultData)}
 
-    resetProduct = () => {
-        this.setState(() => this.defaultData)
-    }
-
+    // @GetMapping
     componentDidMount() {
         axios.get('http://localhost:8080/api/requestProducts/allRequestProducts')
             .then(response => response.data)
-            .then(data => {
-                this.setState({requestProduct: data})
-            })
+            .then(data => {this.setState({requestProduct: data})})
     }
 
+    // @PostMapping
     productRequestToMongoDB(event) {
         
         event.preventDefault();
-
         const productRequestData = {
             productName: this.state.name,
             productPrice: this.state.price, 
@@ -66,11 +49,12 @@ class ProductRequest extends Component {
             .then(response => {
                 if(response.data != null) {
                     alert("The Request has been Successfully Added");
-                    this.setState(this.defaultData);
+                    this.setState(this.requestProductDefaultData);
                 }
             })
     }
 
+    // @DeleteMapping
     deleteRequestProduct = (requestProductID) => {
         axios.delete("http://localhost:8080/api/requestProducts/deletePurchasedProducts/" + requestProductID)
             .then(
@@ -79,6 +63,28 @@ class ProductRequest extends Component {
                 })
             )
     }
+
+    // @GetMapping
+    // componentDidUpdate() {
+    //     const requestProductID = +this.props.match.params.ID;
+
+    //     if(requestProductID) {
+    //         axios.get('http://localhost:8080/api/requestProducts/allRequestProductsByID/' + requestProductID)
+    //             .then(response => {
+    //                 if(response.data != null) {
+    //                     this.setState({
+    //                         ID: response.data.ID,
+    //                         name: response.data.name, 
+    //                         price: response.data.price, 
+    //                         categories: response.data.categories, 
+    //                         description1: response.data.description1, 
+    //                         description2: response.data.description2,
+    //                         description3: response.data.description3 
+    //                     })
+    //                 }
+    //             })
+    //     }
+    // }
 
     render() {
         return (
@@ -179,13 +185,13 @@ class ProductRequest extends Component {
                                     <Table bordered hover striped variant="dark">
                                         <thead>
                                             <tr>
-                                                <th style={{paddingRight: '47px', paddingLeft: '48px'}}><i>Name</i></th>
+                                                <th style={{paddingRight: '49px', paddingLeft: '50px'}}><i>Name</i></th>
                                                 <th style={{paddingRight: '20px', paddingLeft: '20px'}}><i>Price</i></th>
-                                                <th style={{paddingRight: '35px', paddingLeft: '36px'}}><i>Categories</i></th>
-                                                <th style={{paddingRight: '47px', paddingLeft: '48px'}}><i>Description</i></th>
-                                                <th style={{paddingRight: '47px', paddingLeft: '48px'}}><i>Description</i></th>
-                                                <th style={{paddingRight: '47px', paddingLeft: '48px'}}><i>Description</i></th>
-                                                <th style={{paddingRight: '20px', paddingLeft: '20px'}}><i>Actions</i></th>
+                                                <th style={{paddingRight: '37px', paddingLeft: '38px'}}><i>Categories</i></th>
+                                                <th style={{paddingRight: '49px', paddingLeft: '50px'}}><i>Description</i></th>
+                                                <th style={{paddingRight: '49px', paddingLeft: '50px'}}><i>Description</i></th>
+                                                <th style={{paddingRight: '49px', paddingLeft: '50px'}}><i>Description</i></th>
+                                                <th style={{paddingRight: '10px', paddingLeft: '10px'}}><i>Delete</i></th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -205,9 +211,9 @@ class ProductRequest extends Component {
                                                             <td><i>{requestProducts.thirdDescription}</i></td>
                                                             <td>
                                                                 <ButtonGroup>
-                                                                    <Button size='sm' variant='outline-primary'><i class="far fa-edit"></i></Button>
-                                                                    &nbsp;
-                                                                    <Button size='sm' variant='outline-danger' onClick={this.deleteRequestProduct.bind(this, requestProducts.id)}><i class="fas fa-trash"></i></Button>
+                                                                    {/* <Button size='sm' variant='outline-primary' onClick={this.requestProductByID.bind(this, requestProducts.id)}><i class="far fa-edit"></i></Button> */}
+                                                                    {/* &nbsp; */}
+                                                                    <Button variant='outline-danger' onClick={this.deleteRequestProduct.bind(this, requestProducts.id)}><i class="fas fa-trash"></i></Button>
                                                                 </ButtonGroup>
                                                             </td>
                                                         </tr>
