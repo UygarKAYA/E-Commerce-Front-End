@@ -1,70 +1,45 @@
 import React from 'react'
-//import axios from 'axios'
 
 import {Grid, Typography} from '@material-ui/core';
 import CustomerText from './CustomerText';
 
-function AddressForm({AddressFormToMongoDB}) {
-
-    // const itemsPrice = cartItems.reduce((a,c) => a+c.qty * c.price, 0);
-    // const taxPrice = itemsPrice*0.05;
-    // const shippingPrice = (itemsPrice > 2000 || itemsPrice === 0) ? 0 : 5;
-    // const totalPrice = itemsPrice > 0 ? (itemsPrice + taxPrice + shippingPrice) : 0;
-
-    // const AddressFormToMongoDB = event => {
-    //     let firstName = event.target[0].value;
-    //     let lastName = event.target[1].value;
-    //     let email = event.target[2].value;
-    //     let address = event.target[3].value;
-    //     let Country = event.target[4].value;
-    //     let City = event.target[5].value;
-    //     let Town = event.target[6].value;
-    //     let ZipCode = event.target[7].value;
-    //     // let productName = cartItems.name;
-    //     // let productPrice = totalPrice;
-    //     // let productQuantity = cartItems.qty;
-
-    //     let AddressFormData = {
-    //         firstName, lastName, email, address, Country, City, 
-    //             Town, ZipCode
-    //     }
-
-    //     postAddressFormToMongoDB(AddressFormData);
-    // }
-
-    // const postAddressFormToMongoDB = AddressFormData => {
-    //     axios.post('http://localhost:8080/api/purchasedProducts/addPurchasedProducts', AddressFormData)
-    //         .then(alert("Succesfully Added"))
-    //         .catch(error => alert(error));
-    // }
+function AddressForm({name, surname, email, address_, country_, city_, town_, zipCode_}) {
 
     return (
         <div>
             <Typography variant="h5" align="center" gutterBottom><i>Shipping Address</i></Typography>
             <Grid container spacing={3}>
                 <Grid item xs={12} sm={6}>
-                    <CustomerText required name='First Name' label='First Name'/>
+                    <CustomerText name='First Name' label='First Name' 
+                                    required/>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                    <CustomerText required name='Last Name' label='Last Name'/>
+                    <CustomerText name='Last Name' label='Last Name' 
+                                    required/>
                 </Grid>
                 <Grid item xs={12}>
-                    <CustomerText required type='email' name='E-mail' label='E-mail'/>
+                    <CustomerText name='E-mail' label='E-mail' type='email' 
+                                     required/>
                 </Grid>
                 <Grid item xs={12}>
-                    <CustomerText required name='Address' label='Address'/>
+                    <CustomerText name='Address' label='Address' 
+                                     required/>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                    <CustomerText required name='state/Country/Region' label='State/Country/Region'/>
+                    <CustomerText name='state/Country/Region' label='State/Country/Region' 
+                                     required/>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                    <CustomerText required name='City/Province' label='City/Province'/>
+                    <CustomerText name='City/Province' label='City/Province' 
+                                     required/>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                    <CustomerText required name='Town' label='Town'/>
+                    <CustomerText name='Town' label='Town' 
+                                     required/>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                    <CustomerText required name='Zip/Postal Code' label='Zip/Postal Code'/>
+                    <CustomerText name='Zip/Postal Code' label='Zip/Postal Code' 
+                                     required/>
                 </Grid>
             </Grid>
         </div>

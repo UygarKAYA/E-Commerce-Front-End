@@ -25,14 +25,12 @@ class ProductRequest extends Component {
     submitChange = event => {this.setState ({ [event.target.name]: event.target.value })}
     resetProduct = () => {this.setState(() => this.requestProductDefaultData)}
 
-    // @GetMapping
     componentDidMount() {
         axios.get('http://localhost:8080/api/requestProducts/allRequestProducts')
             .then(response => response.data)
             .then(data => {this.setState({requestProduct: data})})
     }
 
-    // @PostMapping
     productRequestToMongoDB(event) {
         
         event.preventDefault();
@@ -48,13 +46,12 @@ class ProductRequest extends Component {
         axios.post("http://localhost:8080/api/requestProducts/addRequestProducts", productRequestData)
             .then(response => {
                 if(response.data != null) {
-                    alert("The Request has been Successfully Added");
+                    alert("The Request has been Successfully Added To MongoDB");
                     this.setState(this.requestProductDefaultData);
                 }
             })
     }
 
-    // @DeleteMapping
     deleteRequestProduct = (requestProductID) => {
         axios.delete("http://localhost:8080/api/requestProducts/deletePurchasedProducts/" + requestProductID)
             .then(
@@ -63,28 +60,6 @@ class ProductRequest extends Component {
                 })
             )
     }
-
-    // @GetMapping
-    // componentDidUpdate() {
-    //     const requestProductID = +this.props.match.params.ID;
-
-    //     if(requestProductID) {
-    //         axios.get('http://localhost:8080/api/requestProducts/allRequestProductsByID/' + requestProductID)
-    //             .then(response => {
-    //                 if(response.data != null) {
-    //                     this.setState({
-    //                         ID: response.data.ID,
-    //                         name: response.data.name, 
-    //                         price: response.data.price, 
-    //                         categories: response.data.categories, 
-    //                         description1: response.data.description1, 
-    //                         description2: response.data.description2,
-    //                         description3: response.data.description3 
-    //                     })
-    //                 }
-    //             })
-    //     }
-    // }
 
     render() {
         return (
