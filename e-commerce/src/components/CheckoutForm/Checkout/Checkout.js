@@ -22,7 +22,7 @@ function Checkout({deleteAllItems, cartItems}) {
     const [city_, setCity] = useState('')
     const [town_, setTown] = useState('')
     const [zipCode_, setZipCode] = useState('')
-    
+
     const Form = () => activeStep === 0 ? <AddressForm name={name} setName={setName} surname={surname} setSurname={setSurname}
                                                             email={email} setEmail={setEmail} address_={address_} setAddress_={setAddress_}
                                                                 country_={country_} setCountry={setCountry} city_={city_} setCity={setCity}
@@ -38,7 +38,7 @@ function Checkout({deleteAllItems, cartItems}) {
     const handleNext = () => { setActiveStep(activeStep + 1); };
     const handleBack = () => { setActiveStep(activeStep - 1); };
 
-    const CheckoutTOMongoDB = () => {
+    const CheckoutToMongoDB = () => {
 
         const CheckoutData = {
             firstName: name,
@@ -90,14 +90,15 @@ function Checkout({deleteAllItems, cartItems}) {
                                         </Button>
                                     )}
                                     {activeStep === steps.length - 1 && (
-                                        <Button onClick={() => { deleteAllItems(); handleNext(); CheckoutTOMongoDB(); }} 
+                                        <Button onClick={() => { deleteAllItems(); handleNext(); CheckoutToMongoDB(); }} 
                                                 className={class_.button} type="submit" 
                                                 color="primary" variant="contained">
                                             <i>Place Order</i>
                                         </Button>
                                     )}
                                     {activeStep !== steps.length - 1 && (
-                                        <Button onClick={() => { handleNext(); }} className={class_.button}    
+                                        <Button onClick={() => { handleNext(); }} 
+                                                className={class_.button}    
                                                 color="primary" variant="contained">
                                             <i>Next</i>
                                         </Button>
