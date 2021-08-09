@@ -23,8 +23,10 @@ function Checkout({deleteAllItems, cartItems}) {
     const [town, setTown] = useState('')
     const [zipCode, setZipCode] = useState('')
 
-    const Form = () => activeStep === 0 ? <AddressForm setName={setName} setSurname={setSurname} setEmail={setEmail} setAddress={setAddress}
-                                                                setCountry={setCountry} setCity={setCity} setTown={setTown} setZipCode={setZipCode}/> 
+    const Form = () => activeStep === 0 ? <AddressForm name={name} setName={setName} surname={surname} setSurname={setSurname} 
+                                                        email={email} setEmail={setEmail}  address={address} setAddress={setAddress} 
+                                                            country={country} setCountry={setCountry} city={city} setCity={setCity} 
+                                                                town={town} setTown={setTown} zipCode={zipCode} setZipCode={setZipCode}/> 
                                         : <OrderDetails cartItems={cartItems}/>
     const class_ = useStyle();
 
